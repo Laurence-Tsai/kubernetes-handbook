@@ -1,0 +1,551 @@
+/* ==========================================================================
+   簡歷整體樣式 - 專業現代化設計
+   ========================================================================== */
+:root {
+  --primary-color: #1a365d;
+  --secondary-color: #2c5282;
+  --accent-color: #3182ce;
+  --success-color: #38a169;
+  --warning-color: #ed8936;
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
+  --text-light: #718096;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7fafc;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --border-radius: 8px;
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'SF Mono', 'Fira Code', 'Roboto Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.resume-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg-primary);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ==========================================================================
+   頭部區域
+   ========================================================================== */
+.resume-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1.5" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.8" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.header-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contact-item a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-item a:hover {
+  color: var(--accent-color);
+  transform: translateY(-1px);
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* ==========================================================================
+   主要內容區域
+   ========================================================================== */
+.resume-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: 0;
+}
+
+.resume-section {
+  padding: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.resume-section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), var(--success-color));
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   專業摘要
+   ========================================================================== */
+.professional-summary {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, #edf2f7 100%);
+  border-left: 4px solid var(--accent-color);
+  padding: 2rem;
+  margin: -2.5rem -2.5rem 2.5rem -2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.professional-summary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), var(--success-color), var(--warning-color));
+}
+
+.summary-highlight {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.summary-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   技能表格
+   ========================================================================== */
+.skills-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 2rem;
+  background: var(--bg-primary);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.skills-table th,
+.skills-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.skills-table th {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skills-table td {
+  font-family: var(--font-family-mono);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.skills-table tr:hover td {
+  background-color: var(--bg-secondary);
+}
+
+/* ==========================================================================
+   工作經驗
+   ========================================================================== */
+.experience-item {
+  margin-bottom: 2.5rem;
+  padding-left: 2rem;
+  position: relative;
+  break-inside: avoid;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, var(--accent-color), var(--success-color));
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--bg-primary);
+  z-index: 1;
+}
+
+.experience-item::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: -2.5rem;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-color), var(--success-color));
+  z-index: 0;
+}
+
+.experience-item:last-child::after {
+  display: none;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.experience-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.experience-company {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.experience-bullet {
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.experience-bullet::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.experience-metric {
+  font-weight: 700;
+  color: var(--success-color);
+  background: rgba(56, 161, 105, 0.1);
+  padding: 0.125rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+/* ==========================================================================
+   關鍵項目表格
+   ========================================================================== */
+.projects-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2rem 0;
+  background: var(--bg-primary);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.projects-table th {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  color: white;
+  padding: 1.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: left;
+  border: none;
+}
+
+.projects-table td {
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: top;
+}
+
+.projects-table tr:nth-child(even) td {
+  background-color: rgba(248, 250, 252, 0.5);
+}
+
+.projects-table tr:hover td {
+  background-color: var(--bg-secondary);
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+.project-tech {
+  font-family: var(--font-family-mono);
+  background: linear-gradient(135deg, var(--accent-color), var(--success-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   認證表格
+   ========================================================================== */
+.certifications-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.75rem;
+}
+
+.certifications-table th,
+.certifications-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+.certifications-table th {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  color: white;
+  font-weight: 600;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.certifications-table td {
+  background: var(--bg-secondary);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.cert-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cert-status.in-progress {
+  background: linear-gradient(135deg, #fed7d7, #feb2b2);
+  color: #c53030;
+}
+.cert-status.completed {
+  background: linear-gradient(135deg, #c6f6d5, #9ae6b4);
+  color: #22543d;
+}
+
+/* ==========================================================================
+   響應式設計
+   ========================================================================== */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .resume-container {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .resume-header {
+    padding: 2rem 1.5rem;
+  }
+  
+  .header-name {
+    font-size: 2rem;
+  }
+  
+  .header-contact {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .resume-section {
+    padding: 1.5rem;
+  }
+  
+  .professional-summary {
+    margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .skills-table th,
+  .skills-table td {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+  
+  .projects-table th,
+  .projects-table td {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-name {
+    font-size: 1.75rem;
+  }
+  
+  .section-title {
+    font-size: 1.25rem;
+  }
+  
+  .experience-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* ==========================================================================
+   打印優化
+   ========================================================================== */
+@media print {
+  body {
+    background: white !important;
+    padding: 0 !important;
+  }
+  
+  .resume-container {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    max-width: none !important;
+  }
+  
+  .resume-header {
+    background: #1a365d !important;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  .skills-table,
+  .projects-table {
+    box-shadow: none !important;
+  }
+}
+
+/* ==========================================================================
+   自定義滾動條
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* ==========================================================================
+   動畫效果
+   ========================================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resume-section {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.resume-section:nth-child(1) { animation-delay: 0.1s; }
+.resume-section:nth-child(2) { animation-delay: 0.2s; }
+.resume-section:nth-child(3) { animation-delay: 0.3s; }
+.resume-section:nth-child(4) { animation-delay: 0.4s; }
