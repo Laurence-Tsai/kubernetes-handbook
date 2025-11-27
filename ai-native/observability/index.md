@@ -248,11 +248,11 @@ class ModelMonitor:
     def __init__(self, model_name):
         self.model_name = model_name
         self.prediction_counter = Counter(
-            f'ai_model_predictions_total{{model="{model_name}"}}',
+            f'ai_model_predictions_total{model="{model_name}"}',
             'Model predictions'
         )
         self.accuracy_gauge = Gauge(
-            f'ai_model_accuracy{{model="{model_name}"}}',
+            f'ai_model_accuracy{model="{model_name}"}',
             'Model accuracy'
         )
 
