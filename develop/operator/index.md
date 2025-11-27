@@ -374,7 +374,7 @@ graph TD
 ![Operator 技术栈生态图](6f351f7ce855d7bd67f149590a1be611.svg)
 {width=2354 height=938}
 
-{{< table title="主流 Operator 技术栈对比" >}}
+## 主流 Operator 技术栈对比
 
 | 工具 | 语言 | 特点 | 适用场景 |
 |------|------|------|----------|
@@ -384,8 +384,6 @@ graph TD
 | Crossplane v1.16+ | Go/YAML | 平台抽象，多云支持 | 基础设施即代码 |
 | Capsule v0.7+ | Go | 多租户 Operator | SaaS 平台 |
 | KUDO v1.4+ | YAML | 声明式，无代码开发 | 非开发者用户 |
-
-{{< /table >}}
 
 ### 开发步骤
 

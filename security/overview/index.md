@@ -64,7 +64,7 @@ Kubernetes 区分两类用户：
 
 Kubernetes 支持多种认证方式，可同时启用：
 
-{{< table title="Kubernetes 认证策略与适用场景" >}}
+## Kubernetes 认证策略与适用场景
 
 | 策略 | 说明 | 适用场景 |
 | --- | --- | --- |
@@ -74,8 +74,6 @@ Kubernetes 支持多种认证方式，可同时启用：
 | Service Account Token | Pod 自动生成 Token | 集群内组件通信 |
 | OpenID Connect | 外部身份提供集成 | 企业统一身份 |
 | Webhook Token | 委托外部服务认证 | 定制化认证逻辑 |
-
-{{< /table >}}
 
 多认证器并存时，首个认证成功者决定身份，API Server 不保证认证器执行顺序。
 
@@ -255,7 +253,7 @@ flowchart TD
 
 ### 常用准入控制器
 
-{{< table title="常用准入控制器及作用" >}}
+## 常用准入控制器及作用
 
 | 控制器 | 类型 | 作用 |
 | --- | --- | --- |
@@ -267,8 +265,6 @@ flowchart TD
 | ValidatingAdmissionWebhook | 校验型 | 调用外部 Webhook 校验资源 |
 | DefaultStorageClass | 变更型 | 设置 PVC 默认存储类 |
 | NodeRestriction | 校验型 | 限制 kubelet 权限 |
-
-{{< /table >}}
 
 ### 扩展准入控制
 
@@ -299,7 +295,7 @@ resources:
 
 ### 支持的加密提供者
 
-{{< table title="Kubernetes 加密提供者对比" >}}
+## Kubernetes 加密提供者对比
 
 | 提供者 | 加密方式 | 强度 | 密钥轮换 |
 | --- | --- | --- | --- |
@@ -308,8 +304,6 @@ resources:
 | secretbox | XSalsa20/Poly1305 | 强 | 手动 |
 | aesgcm | AES-GCM | 强（需定期轮换） | 每 20 万次写入 |
 | kms | 信封加密 | 最强 | 用户自控 |
-
-{{< /table >}}
 
 ### KMS 信封加密流程
 
@@ -374,7 +368,7 @@ sequenceDiagram
 
 ### 内置签名者
 
-{{< table title="Kubernetes 内置证书签名者" >}}
+## Kubernetes 内置证书签名者
 
 | 签名者名称 | 用途 |
 | --- | --- |
@@ -382,8 +376,6 @@ sequenceDiagram
 | kubernetes.io/kube-apiserver-client-kubelet | kubelet 客户端证书 |
 | kubernetes.io/kubelet-serving | kubelet 服务端证书 |
 | kubernetes.io/legacy-unknown | 兼容历史用途 |
-
-{{< /table >}}
 
 ## 命名空间与安全隔离
 

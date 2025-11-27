@@ -92,7 +92,7 @@ spec:
 
 下表总结了 Toleration 主要字段及含义。
 
-{{< table title="Toleration 字段说明" >}}
+## Toleration 字段说明
 
 | 字段              | 说明                                   |
 |-------------------|----------------------------------------|
@@ -101,8 +101,6 @@ spec:
 | value             | 对应 Taint 的值（Exists 时可省略）      |
 | effect            | 污点效果类型（NoSchedule/PreferNoSchedule/NoExecute） |
 | tolerationSeconds | 容忍宽限时间，仅对 NoExecute 有效       |
-
-{{< /table >}}
 
 - `operator: Equal` 精确匹配键值对，`Exists` 只要键存在即匹配。
 - `effect` 控制调度或驱逐行为，`tolerationSeconds` 控制 Pod 被驱逐前的宽限时间。
@@ -142,7 +140,7 @@ kubectl taint nodes problematic-node problem=disk-pressure:NoSchedule
 
 Kubernetes 会自动为节点添加一些内置污点，用于反映节点健康和资源状态。
 
-{{< table title="Kubernetes 内置 Taint 列表" >}}
+## Kubernetes 内置 Taint 列表
 
 | 污点键                                 | 说明           |
 |----------------------------------------|----------------|
@@ -152,8 +150,6 @@ Kubernetes 会自动为节点添加一些内置污点，用于反映节点健康
 | node.kubernetes.io/memory-pressure     | 内存压力       |
 | node.kubernetes.io/pid-pressure        | PID 压力       |
 | node.kubernetes.io/network-unavailable | 网络不可用     |
-
-{{< /table >}}
 
 ## 最佳实践
 

@@ -48,7 +48,7 @@ flowchart TD
 ![ConfigMap 与 Secret 消费方式](264b709cf94d9fb0c15e96c22c1adcf7.svg)
 {width=1920 height=1796}
 
-{{< table title="ConfigMap 与 Secret 功能对比" >}}
+## ConfigMap 与 Secret 功能对比
 
 | 特性         | ConfigMap                | Secret                                 |
 | ------------ | ----------------------- | -------------------------------------- |
@@ -56,8 +56,6 @@ flowchart TD
 | 存储方式     | 以明文存储于 etcd        | 以 base64 编码存储于 etcd（默认不加密）|
 | 单个大小限制 | 1MiB                    | 1MiB                                   |
 | 使用方式     | 环境变量、卷文件、命令参数 | 环境变量、卷文件、命令参数             |
-
-{{< /table >}}
 
 ## ConfigMap 详解
 
@@ -142,7 +140,7 @@ flowchart LR
 ![Secret 类型与典型用途](38bb71880763e102d2958db70a8762de.svg)
 {width=1920 height=2404}
 
-{{< table title="Secret 类型与用途说明" >}}
+## Secret 类型与用途说明
 
 | Secret 类型                          | 用途                         |
 | ------------------------------------ | ---------------------------- |
@@ -153,8 +151,6 @@ flowchart LR
 | `kubernetes.io/ssh-auth`             | SSH 密钥                     |
 | `kubernetes.io/tls`                  | TLS 证书与密钥               |
 | `bootstrap.kubernetes.io/token`      | 启动引导令牌                 |
-
-{{< /table >}}
 
 ### Secret 创建方式
 

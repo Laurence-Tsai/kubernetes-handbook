@@ -71,7 +71,7 @@ webhooks:
 
 下表对关键字段进行说明：
 
-{{< table title="ValidatingWebhookConfiguration 字段说明" >}}
+## ValidatingWebhookConfiguration 字段说明
 
 | 字段                        | 含义                                        |
 | ------------------------- | ----------------------------------------- |
@@ -80,8 +80,6 @@ webhooks:
 | `clientConfig`            | Webhook 服务地址及证书配置                         |
 | `admissionReviewVersions` | 支持的 AdmissionReview 版本                    |
 | `sideEffects`             | 声明是否会产生副作用（一般为 `None`）                    |
-
-{{< /table >}}
 
 ## Webhook 服务实现
 
@@ -176,7 +174,7 @@ ValidatingWebhook 可用于多种场景，以下为常见应用示例：
 
 下表对比 ValidatingWebhook 与 OPA Gatekeeper 的主要特性：
 
-{{< table title="ValidatingWebhook 与 OPA Gatekeeper 对比" >}}
+## ValidatingWebhook 与 OPA Gatekeeper 对比
 
 | 功能点    | ValidatingWebhook | OPA Gatekeeper |
 | ------ | ----------------- | -------------- |
@@ -185,8 +183,6 @@ ValidatingWebhook 可用于多种场景，以下为常见应用示例：
 | 易用性    | 较复杂               | 易于使用           |
 | 性能     | 高度可控              | 依赖 OPA 引擎性能    |
 | 典型用途   | 企业自研策略控制、特定业务逻辑   | 通用策略与合规控制      |
-
-{{< /table >}}
 
 在实际生产环境中，两者常结合使用：**ValidatingWebhook 实现动态逻辑**，**Gatekeeper 管理通用策略模板**。
 

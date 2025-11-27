@@ -199,7 +199,7 @@ spec:
 
 **API Server 配置参数**：
 
-{{< table title="OIDC 认证相关参数说明" >}}
+## OIDC 认证相关参数说明
 
 | 参数 | 描述 | 是否必需 |
 |------|------|----------|
@@ -208,8 +208,6 @@ spec:
 | `--oidc-username-claim` | JWT 用户名字段 | 否 |
 | `--oidc-groups-claim` | JWT 用户组字段 | 否 |
 | `--oidc-ca-file` | 身份提供商 CA 证书 | 否 |
-
-{{< /table >}}
 
 **kubectl 配置示例**：
 
@@ -385,7 +383,7 @@ Kubernetes 提供 `certificates.k8s.io` API 实现自动化证书生命周期管
 
 为提升集群安全性，建议遵循以下最佳实践：
 
-{{< table title="Kubernetes 身份认证最佳实践" >}}
+## Kubernetes 身份认证最佳实践
 
 | 类别         | 建议与说明                         |
 |--------------|------------------------------------|
@@ -394,8 +392,6 @@ Kubernetes 提供 `certificates.k8s.io` API 实现自动化证书生命周期管
 | 定期轮换     | 定期更新证书和 token               |
 | 审计日志     | 启用审计功能跟踪认证与授权活动     |
 | 外部认证     | 企业环境集成 LDAP、OIDC 等系统     |
-
-{{< /table >}}
 
 ## 总结
 

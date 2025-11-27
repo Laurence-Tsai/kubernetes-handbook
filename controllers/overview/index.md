@@ -134,7 +134,7 @@ graph TD
 
 ### StatefulSet 与 Deployment 对比
 
-{{< table title="StatefulSet 与 Deployment 特性对比" >}}
+## StatefulSet 与 Deployment 特性对比
 
 | 特性         | StatefulSet                | Deployment              |
 | ------------ | -------------------------- | ----------------------- |
@@ -143,8 +143,6 @@ graph TD
 | 扩缩容       | 有序、一次一个              | 可同时扩缩多个 Pod      |
 | 更新         | 有序、受控                  | 可同时更新多个 Pod      |
 | 典型场景     | 有状态应用（数据库等）      | 无状态应用              |
-
-{{< /table >}}
 
 ## Job 与 CronJob 控制器
 
@@ -265,15 +263,13 @@ stateDiagram-v2
 
 Kubernetes 提供多种探针检测容器健康：
 
-{{< table title="容器探针类型说明" >}}
+## 容器探针类型说明
 
 | 探针类型         | 作用                         | 失败时动作                   |
 | ---------------- | ---------------------------- | ---------------------------- |
 | Liveness Probe   | 检测容器是否存活             | 重启容器                     |
 | Readiness Probe  | 检测容器是否可对外服务       | 从服务端点移除               |
 | Startup Probe    | 检测应用是否已启动           | 延迟存活/就绪检查            |
-
-{{< /table >}}
 
 ### 水平 Pod 自动扩缩容
 
@@ -367,15 +363,13 @@ graph TD
 
 ### 扩缩容策略
 
-{{< table title="Kubernetes 扩缩容类型与场景" >}}
+## Kubernetes 扩缩容类型与场景
 
 | 扩缩容类型 | 控制器                  | 适用场景                       |
 | ---------- | ----------------------- | ------------------------------ |
 | 水平扩缩容 | HorizontalPodAutoscaler | 无状态应用、负载波动           |
 | 垂直扩缩容 | VerticalPodAutoscaler   | 不能水平扩展的应用             |
 | 集群扩缩容 | Cluster Autoscaler      | 整体集群容量自动管理           |
-
-{{< /table >}}
 
 ### Pod 生命周期管理
 

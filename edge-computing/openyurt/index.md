@@ -169,7 +169,7 @@ graph TB
 
 下表总结了 OpenYurt 各核心组件的作用、部署方式及关键特性。通过该表可以快速了解各组件的定位和功能。
 
-{{< table title="OpenYurt 主要组件功能表" >}}
+## OpenYurt 主要组件功能表
 
 | 组件 | 主要作用 | 部署方式 | 关键特性 |
 | --- | --- | --- | --- |
@@ -178,21 +178,17 @@ graph TB
 | **yurt-coordinator** | 池长选举与流量复用 | 边缘（Deployment） | 池长选举、池内数据共享 |
 | **yurt-iot-dock** | IoT 设备管理 | 边缘（可选） | EdgeX 集成、设备生命周期管理 |
 
-{{< /table >}}
-
 ## 版本兼容性
 
 下表展示了 OpenYurt 各版本与 Kubernetes 兼容性及主要特性，便于用户选择合适的版本进行部署。
 
-{{< table title="OpenYurt 版本兼容性与特性" >}}
+## OpenYurt 版本兼容性与特性
 
 | OpenYurt 版本 | 支持的 Kubernetes 版本 | 主要特性 |
 | --- | --- | --- |
 | v1.6.0（当前） | v1.30 及以下 | 增强边缘自治、流量复用、托管 K8s 支持 |
 | v1.5.0 | v1.28 及以下 | NodeBucket 扩展性、YurtAppSet v1beta1 |
 | v1.4.0 | v1.22 及以下 | HostNetwork 节点池、PlatformAdmin CRD |
-
-{{< /table >}}
 
 ## 关键特性与能力
 

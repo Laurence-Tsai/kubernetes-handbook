@@ -187,7 +187,7 @@ flowchart LR
 
 下表总结了常见现象、可能原因及排查建议：
 
-{{< table title="Mutating Webhook 常见故障排查表" >}}
+## Mutating Webhook 常见故障排查表
 
 | 现象                   | 可能原因                       | 排查建议                       |
 | ---------------------- | ------------------------------ | ------------------------------ |
@@ -195,8 +195,6 @@ flowchart LR
 | Pod 创建卡在 `Pending` | Webhook 超时                   | 设置 `timeoutSeconds`          |
 | Patch 无效             | Patch 路径错误或 JSON 编码问题 | 检查返回的 patch 是否为 Base64 |
 | 无法连接 Webhook       | ClusterIP 或 DNS 配置错误      | 检查 Service 名称与 Namespace  |
-
-{{< /table >}}
 
 合理配置 Webhook 服务和 Kubernetes 资源，可有效避免上述问题。
 

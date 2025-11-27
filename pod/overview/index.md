@@ -114,7 +114,7 @@ Kubernetes 通过控制器（Controller）来管理 Pod，实现自动化运维�
 
 以下表格总结了常见控制器类型及其用途：
 
-{{< table title="Kubernetes 控制器类型与用途" >}}
+## Kubernetes 控制器类型与用途
 
 | 控制器类型 | 用途 | 特点 |
 |------------|------|------|
@@ -123,8 +123,6 @@ Kubernetes 通过控制器（Controller）来管理 Pod，实现自动化运维�
 | [DaemonSet](../../controllers/daemonset) | 节点级服务 | 每个节点运行一个 Pod |
 | [Job](../../controllers/job) | 批处理任务 | 一次性任务执行 |
 | [CronJob](../../controllers/cronjob) | 定时任务 | 按计划执行任务 |
-
-{{< /table >}}
 
 ### Pod 扩缩容
 

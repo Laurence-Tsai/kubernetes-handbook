@@ -81,7 +81,7 @@ graph TB
 ![Volcano 架构总览](e50d13c14269ef18427c0e5654b4688d.svg)
 {width=3992 height=1213}
 
-{{< table title="Volcano 核心组件职责" >}}
+## Volcano 核心组件职责
 
 | 组件                  | 作用                                  |
 |-----------------------|---------------------------------------|
@@ -89,8 +89,6 @@ graph TB
 | vc-controller-manager | 管理 CRD 生命周期（Job、Queue、PodGroup） |
 | vc-webhook-manager    | Admission 校验与变更                  |
 | vc-agent              | 节点级管理（部分版本可选）            |
-
-{{< /table >}}
 
 ## 自定义资源（CRD）模型
 
@@ -120,7 +118,7 @@ graph TB
 ![Volcano CRD 模型](1c1276cf6df0e487ce4c16fef59c1d09.svg)
 {width=1920 height=1828}
 
-{{< table title="Volcano CRD 功能说明" >}}
+## Volcano CRD 功能说明
 
 | 资源类型    | 功能说明                             |
 |-------------|--------------------------------------|
@@ -129,8 +127,6 @@ graph TB
 | Queue       | 定义资源配额与优先级                 |
 | JobFlow     | 支持任务依赖与有向执行图（DAG）      |
 | JobTemplate | 模板化任务定义，方便重用             |
-
-{{< /table >}}
 
 ## 调度流程与执行机制
 
@@ -232,7 +228,7 @@ graph TB
 ![Volcano 插件体系](c702ec2359e8ed558e42b311103b9c9b.svg)
 {width=2591 height=1071}
 
-{{< table title="常见内置插件功能" >}}
+## 常见内置插件功能
 
 | 插件         | 功能说明             |
 |--------------|----------------------|
@@ -244,8 +240,6 @@ graph TB
 | BinPack      | 紧密打包，提升利用率 |
 | Overcommit   | 超卖调度             |
 | Topology     | NUMA / 网络拓扑感知  |
-
-{{< /table >}}
 
 ## 安装与使用
 
@@ -274,7 +268,7 @@ kubectl apply -f https://raw.githubusercontent.com/volcano-sh/volcano/master/ins
 
 Volcano 适用于多种批处理和高性能计算场景。下表列举了典型应用框架及其调度特性。
 
-{{< table title="Volcano 典型使用场景" >}}
+## Volcano 典型使用场景
 
 | 场景           | 框架                      | 调度特性                 |
 |----------------|---------------------------|--------------------------|
@@ -284,15 +278,13 @@ Volcano 适用于多种批处理和高性能计算场景。下表列举了典型
 | Bioinformatics | Cromwell、KubeGene        | 工作流依赖调度           |
 | ML Pipeline    | Kubeflow、Argo            | JobFlow + 模板复用       |
 
-{{< /table >}}
-
 > 使用时，只需在 Pod 或 Job 中指定 `schedulerName: volcano`，即可启用 Volcano 调度。
 
 ## 与原生 Kubernetes 的区别
 
 下表对比了 Volcano 与 kube-scheduler 的主要差异。
 
-{{< table title="Volcano 与 kube-scheduler 对比" >}}
+## Volcano 与 kube-scheduler 对比
 
 | 对比维度     | kube-scheduler | Volcano                      |
 |--------------|----------------|------------------------------|
@@ -302,8 +294,6 @@ Volcano 适用于多种批处理和高性能计算场景。下表列举了典型
 | CRD 支持     | 无             | Job / Queue / PodGroup       |
 | 插件扩展     | 有限           | 完整可插拔插件系统           |
 | 应用场景     | 长期服务       | 批处理 / HPC / AI 训练       |
-
-{{< /table >}}
 
 ## 总结
 

@@ -17,7 +17,7 @@ Kubernetes 之所以能成为现代云计算的基础设施，不仅因为它“
 
 本章围绕这一哲学，系统介绍了四大扩展机制。下表总结了各机制的类别、关键组件与典型应用场景。
 
-{{< table title="Kubernetes 四大扩展机制与典型应用" >}}
+## Kubernetes 四大扩展机制与典型应用
 
 | 类别 | 机制 | 关键组件 | 典型应用 |
 |------|------|-----------|-----------|
@@ -25,8 +25,6 @@ Kubernetes 之所以能成为现代云计算的基础设施，不仅因为它“
 | 控制面扩展 | Controller / Operator | Controller Manager | 自动化运维 |
 | 准入控制扩展 | Admission Webhook | API Server | 策略与安全 |
 | 调度扩展 | Scheduler Framework | kube-scheduler | 智能调度（GPU/AI） |
-
-{{< /table >}}
 
 ## 扩展机制回顾
 
@@ -74,15 +72,13 @@ API 扩展让 Kubernetes 支持任意自定义资源（CRD），无需修改 API
 
 下表总结了各阶段的核心特征与代表技术。
 
-{{< table title="从 Cloud-Native 到 AI-Native 的演进阶段" >}}
+## 从 Cloud-Native 到 AI-Native 的演进阶段
 
 | 阶段                    | 核心特征            | 代表技术                                 |
 | --------------------- | --------------- | ------------------------------------ |
 | Cloud-Native（云原生） | 容器化、自动化、弹性伸缩    | Kubernetes / Istio / Envoy           |
 | ML-Native（机器学习原生） | 训练与推理工作流集成      | Kubeflow / KServe / MLflow           |
 | AI-Native（人工智能原生） | 模型中心化、智能调度、语义网格 | KubeRay / Volcano / AI Gateway / MCP |
-
-{{< /table >}}
 
 下图展示了从 Cloud-Native 到 AI-Native 的技术演进路径。
 

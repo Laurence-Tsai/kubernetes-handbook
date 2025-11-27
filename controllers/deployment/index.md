@@ -76,7 +76,7 @@ kubectl rollout undo deployment/nginx-deployment
 
 Deployment 通过声明式更新能力，自动管理 Pod 和 ReplicaSet 的生命周期。只需描述期望的目标状态，Deployment Controller 会自动驱动实际状态向目标状态收敛。
 
-{{< table title="Deployment 典型应用场景" >}}
+## Deployment 典型应用场景
 
 | 场景         | 说明                                   |
 |--------------|----------------------------------------|
@@ -87,8 +87,6 @@ Deployment 通过声明式更新能力，自动管理 Pod 和 ReplicaSet 的生�
 | 部署控制     | 支持暂停、恢复、批量修改               |
 | 状态监控     | 监控部署进度与健康状态                 |
 | 历史清理     | 清理旧 ReplicaSet，节省资源            |
-
-{{< /table >}}
 
 **注意**：不要手动管理由 Deployment 创建的 ReplicaSet，否则会与 Deployment Controller 产生冲突。
 
@@ -116,7 +114,7 @@ kubectl get pods --show-labels
 
 Deployment 状态字段说明：
 
-{{< table title="Deployment 状态字段说明" >}}
+## Deployment 状态字段说明
 
 | 字段         | 含义                         |
 |--------------|------------------------------|
@@ -124,8 +122,6 @@ Deployment 状态字段说明：
 | CURRENT      | 当前副本数（.status.replicas）|
 | UP-TO-DATE   | 最新副本数（.status.updatedReplicas）|
 | AVAILABLE    | 可用副本数（.status.availableReplicas）|
-
-{{< /table >}}
 
 ### 查看关联资源
 

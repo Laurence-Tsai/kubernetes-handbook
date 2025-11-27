@@ -16,7 +16,7 @@ lastmod: 2025-10-27T13:14:35.181Z
 
 Kubernetes 资源对象用于描述集群中各种实体和功能。下表总结了常用对象类型及其主要用途：
 
-{{< table title="Kubernetes 常用资源对象分类" >}}
+## Kubernetes 常用资源对象分类
 
 | 类别         | 资源对象                                                                                 | 说明                         |
 | ------------ | ---------------------------------------------------------------------------------------- | ---------------------------- |
@@ -27,8 +27,6 @@ Kubernetes 资源对象用于描述集群中各种实体和功能。下表总结
 | 安全与权限   | ServiceAccount、Role、ClusterRole、SecurityContext                                       | 身份认证与权限控制           |
 | 资源管理     | ResourceQuota、LimitRange、HorizontalPodAutoscaler（HPA）                                 | 资源分配与自动扩缩容         |
 | 扩展性       | CustomResourceDefinition（CRD）                                                          | 自定义资源类型               |
-
-{{< /table >}}
 
 ## 工作负载对象
 

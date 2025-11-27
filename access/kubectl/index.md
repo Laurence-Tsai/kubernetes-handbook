@@ -158,7 +158,7 @@ kubectl [command] [TYPE] [NAME] [flags]
 
 常用 kubectl 命令如下：
 
-{{< table title="常用 kubectl 命令与示例" >}}
+## 常用 kubectl 命令与示例
 
 | Command      | Description           | Example                                      |
 | ------------ | -------------------- | -------------------------------------------- |
@@ -170,8 +170,6 @@ kubectl [command] [TYPE] [NAME] [flags]
 | logs         | 查看容器日志          | `kubectl logs nginx`                         |
 | exec         | 容器内执行命令        | `kubectl exec -it nginx -- bash`             |
 | port-forward | 端口转发              | `kubectl port-forward pod/nginx 8080:80`     |
-
-{{< /table >}}
 
 ## 直接访问 API
 
@@ -189,7 +187,7 @@ curl http://localhost:8080/api/v1/namespaces/default/pods
 
 kubectl 支持多种输出格式，便于脚本与自动化：
 
-{{< table title="kubectl 输出格式与示例" >}}
+## kubectl 输出格式与示例
 
 | Format         | Description         | Example                                                        |
 | -------------- | ------------------ | -------------------------------------------------------------- |
@@ -201,11 +199,9 @@ kubectl 支持多种输出格式，便于脚本与自动化：
 | jsonpath       | JSONPath 过滤       | `kubectl get pods -o jsonpath='{.items[0].metadata.name}'`     |
 | go-template    | Go 模板格式化       | `kubectl get pods -o go-template='{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}'` |
 
-{{< /table >}}
-
 ### JSONPath 常用表达式
 
-{{< table title="kubectl JSONPath 常用表达式" >}}
+## kubectl JSONPath 常用表达式
 
 | Expression                | Description         |
 | ------------------------- | ------------------ |
@@ -214,8 +210,6 @@ kubectl 支持多种输出格式，便于脚本与自动化：
 | `{.status.phase}`         | 资源状态           |
 | `{range .items[*]}{end}`  | 遍历所有项         |
 | `{.spec.containers[*].image}` | 所有容器镜像   |
-
-{{< /table >}}
 
 ## Server-Side Apply 原理
 
@@ -268,7 +262,7 @@ flowchart TB
 
 Kubernetes 提供多语言官方客户端库：
 
-{{< table title="Kubernetes 官方客户端库" >}}
+## Kubernetes 官方客户端库
 
 | Language   | Client Library                        |
 | ---------- | ------------------------------------- |
@@ -277,8 +271,6 @@ Kubernetes 提供多语言官方客户端库：
 | Java       | github.com/kubernetes-client/java     |
 | JavaScript | github.com/kubernetes-client/javascript |
 | .NET       | github.com/kubernetes-client/csharp   |
-
-{{< /table >}}
 
 ### API 代理与端口转发
 

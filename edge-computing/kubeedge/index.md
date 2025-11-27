@@ -72,7 +72,7 @@ graph TB
 
 下表总结了 KubeEdge 针对边缘计算场景的核心优势，便于快速了解其适用价值。
 
-{{< table title="KubeEdge 核心优势" >}}
+## KubeEdge 核心优势
 
 | 优势 | 说明 |
 | --- | --- |
@@ -81,8 +81,6 @@ graph TB
 | 边缘自治 | 边缘节点可在离线或弱网下自主运行 |
 | 设备管理 | 通过 CRD 实现边缘设备声明式管理 |
 | 轻量级边缘代理 | EdgeCore 极度轻量，适配资源受限设备 |
-
-{{< /table >}}
 
 ## 云端核心组件
 
@@ -298,7 +296,7 @@ graph TD
 
 KubeEdge 支持多版本 Kubernetes，兼容性矩阵如下，便于用户选择合适的版本组合。
 
-{{< table title="KubeEdge 与 Kubernetes 兼容性矩阵" >}}
+## KubeEdge 与 Kubernetes 兼容性矩阵
 
 | KubeEdge 版本 | K8s 1.25 | K8s 1.26 | K8s 1.27 | K8s 1.28 | K8s 1.29 | K8s 1.30 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -308,8 +306,6 @@ KubeEdge 支持多版本 Kubernetes，兼容性矩阵如下，便于用户选择
 | KubeEdge 1.19 | + | + | ✓ | ✓ | ✓ | \- |
 | KubeEdge 1.20 | + | + | + | ✓ | ✓ | ✓ |
 | KubeEdge HEAD | + | + | + | ✓ | ✓ | ✓ |
-
-{{< /table >}}
 
 - ✓: 完全兼容
 - +: KubeEdge 有部分功能或 API 不被该 K8s 版本支持

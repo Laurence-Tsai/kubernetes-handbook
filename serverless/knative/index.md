@@ -231,7 +231,7 @@ spec:
 
 下表汇总了常用扩缩容参数及其含义。
 
-{{< table title="Knative Serving 扩缩容参数说明" >}}
+## Knative Serving 扩缩容参数说明
 
 | 参数 | 描述 | 默认值 |
 |------|------|--------|
@@ -239,8 +239,6 @@ spec:
 | `autoscaling.knative.dev/maxScale` | 最大实例数 | 无限制 |
 | `autoscaling.knative.dev/target` | 目标并发数 | 100 |
 | `autoscaling.knative.dev/metric` | 扩缩容指标 | concurrency |
-
-{{< /table >}}
 
 ## Knative Eventing
 

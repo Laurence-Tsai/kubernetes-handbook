@@ -74,7 +74,7 @@ kubectl config set-context --current --namespace=<namespace-name>
 
 Kubernetes 集群默认包含以下 Namespace：
 
-{{< table title="Kubernetes 默认命名空间说明" >}}
+## Kubernetes 默认命名空间说明
 
 | 名称              | 作用描述                                   |
 |-------------------|--------------------------------------------|
@@ -83,13 +83,11 @@ Kubernetes 集群默认包含以下 Namespace：
 | kube-public       | 所有用户都可访问的公共资源                  |
 | kube-node-lease   | 节点心跳检测的租约对象（提升大规模集群性能） |
 
-{{< /table >}}
-
 ## 资源作用域
 
 并非所有 Kubernetes 资源都属于 Namespace 作用域，需注意区分：
 
-{{< table title="Kubernetes 资源作用域对比" >}}
+## Kubernetes 资源作用域对比
 
 | 资源类型         | Namespace 作用域 | 集群作用域 |
 |------------------|:---------------:|:----------:|
@@ -104,8 +102,6 @@ Kubernetes 集群默认包含以下 Namespace：
 | StorageClass     |                 |     ✔️     |
 | ClusterRole      |                 |     ✔️     |
 | Namespace        |                 |     ✔️     |
-
-{{< /table >}}
 
 ## Namespace 生命周期与资源隔离
 

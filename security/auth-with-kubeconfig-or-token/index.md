@@ -142,15 +142,13 @@ kubectl -n $NAMESPACE get secret $(kubectl -n $NAMESPACE get sa default -o jsonp
 
 Kubernetes Secret 中存储的 token 是 base64 编码，**必须解码**后才能使用。
 
-{{< table title="不同操作系统下 base64 解码命令" >}}
+## 不同操作系统下 base64 解码命令
 
 | 系统   | 解码命令示例                      |
 |--------|-----------------------------------|
 | Linux  | `echo "encoded-token" \| base64 -d` |
 | macOS  | `echo "encoded-token" \| base64 -D` |
 | 在线工具 | [base64decode.org](https://www.base64decode.org/) |
-
-{{< /table >}}
 
 ### 权限控制
 

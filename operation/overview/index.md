@@ -76,15 +76,13 @@ flowchart TD
 
 每个节点都需安装兼容的容器运行时。Kubernetes 通过 CRI（Container Runtime Interface）与运行时对接。常见运行时及其 Unix Socket 路径如下：
 
-{{< table title="常见容器运行时及 Socket 路径" >}}
+## 常见容器运行时及 Socket 路径
 
 | 运行时 | Unix Socket 路径（Linux） |
 | --- | --- |
 | containerd | unix:///var/run/containerd/containerd.sock |
 | CRI-O | unix:///var/run/crio/crio.sock |
 | Docker Engine（需 cri-dockerd） | unix:///var/run/cri-dockerd.sock |
-
-{{< /table >}}
 
 容器运行时需与 kubelet 使用相同的 cgroup driver。常见驱动有：
 
@@ -163,7 +161,7 @@ flowchart TD
 
 升级集群时需遵循组件间的版本兼容策略，确保系统稳定：
 
-{{< table title="Kubernetes 组件版本兼容策略" >}}
+## Kubernetes 组件版本兼容策略
 
 | 组件关系 | 支持的版本差异 |
 | --- | --- |
@@ -172,8 +170,6 @@ flowchart TD
 | kube-controller-manager、kube-scheduler、cloud-controller-manager | 最多可比 kube-apiserver 低 1 个小版本 |
 | kubectl | 可比 kube-apiserver 高/低 1 个小版本 |
 | kubeadm | 升级时需与 kubelet 版本一致 |
-
-{{< /table >}}
 
 ### kubeadm 升级流程
 
@@ -234,7 +230,7 @@ Kubernetes 依赖 PKI 证书进行身份认证。kubeadm 默认生成的证书�
 
 kubeadm 证书存放于 `/etc/kubernetes/pki`，kubeconfig 文件位于 `/etc/kubernetes/`。主要证书说明如下：
 
-{{< table title="Kubernetes 主要证书及用途" >}}
+## Kubernetes 主要证书及用途
 
 | 证书/密钥文件 | 用途 |
 | --- | --- |
@@ -244,8 +240,6 @@ kubeadm 证书存放于 `/etc/kubernetes/pki`，kubeconfig 文件位于 `/etc/ku
 | `sa.pub`、 `sa.key` | ServiceAccount 签名 |
 | `front-proxy-ca.crt`、`front-proxy-ca.key` | 前端代理 CA |
 | `front-proxy-client.crt`、 `front-proxy-client.key` | 前端代理客户端 |
-
-{{< /table >}}
 
 ### 证书续期方式
 
@@ -303,15 +297,13 @@ flowchart LR
 
 例如，当前版本支持计划如下：
 
-{{< table title="Kubernetes 版本支持计划" >}}
+## Kubernetes 版本支持计划
 
 | 版本 | 发布日期 | 维护模式开始 | 生命周期结束 |
 | --- | --- | --- | --- |
 | 1.30 | 2024-04-17 | 2025-04-28 | 2025-06-28 |
 | 1.31 | 2024-08-13 | 2025-08-28 | 2025-10-28 |
 | 1.32 | 2024-12-11 | 2025-12-28 | 2026-02-28 |
-
-{{< /table >}}
 
 ### 补丁发布流程
 
@@ -333,7 +325,7 @@ flowchart LR
 
 下表总结了常见运维故障及排查建议：
 
-{{< table title="Kubernetes 常见故障与排查建议" >}}
+## Kubernetes 常见故障与排查建议
 
 | 问题 | 可能原因 | 排查建议 |
 | --- | --- | --- |
@@ -343,8 +335,6 @@ flowchart LR
 | kubelet 客户端证书轮转失败 | 轮转机制异常 | 按官方手册手动生成证书 |
 | etcd 故障 | 数据损坏、丢失 quorum | 使用 etcd 备份恢复 |
 | CoreDNS Pending | 未安装网络插件 | 安装 CNI 插件 |
-
-{{< /table >}}
 
 ## Windows 工作节点支持
 

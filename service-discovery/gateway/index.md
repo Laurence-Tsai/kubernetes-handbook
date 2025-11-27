@@ -158,7 +158,7 @@ spec:
 - **TLSRoute**：基于 SNI 的 TLS 路由
 - **TCPRoute/UDPRoute**：四层流量路由
 
-{{< table title="Gateway API 路由类型对比" >}}
+## Gateway API 路由类型对比
 
 | 路由类型      | OSI 层     | 路由鉴别器              | TLS 支持   | 主要用途                    |
 |:-------------|:-----------|:-----------------------|:-----------|:---------------------------|
@@ -167,8 +167,6 @@ spec:
 | TLSRoute     | 第 4-7 层  | SNI 和 TLS 属性         | 直通/终止  | 基于 SNI 的 TLS 路由       |
 | TCPRoute     | 第 4 层    | 目的端口               | 直通/终止  | TCP 流量转发               |
 | UDPRoute     | 第 4 层    | 目的端口               | 不支持     | UDP 流量转发               |
-
-{{< /table >}}
 
 ### ReferenceGrant
 

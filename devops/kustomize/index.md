@@ -362,7 +362,7 @@ graph TD
 
 自 Kubernetes 1.14 起，Kustomize 已内置于 kubectl，提供原生配置管理能力。kubectl 内置 Kustomize 版本随 Kubernetes 版本变化。
 
-{{< table title="kubectl 与 Kustomize 版本对应表" >}}
+## kubectl 与 Kustomize 版本对应表
 
 | Kubectl 版本 | Kustomize 版本 |
 | ------------ | -------------- |
@@ -376,8 +376,6 @@ graph TD
 | v1.26        | v4.5.7         |
 | v1.27        | v5.0.1         |
 | v1.31        | v5.4.2         |
-
-{{< /table >}}
 
 > 可通过 `kubectl version --client` 查看当前 kubectl 内置的 Kustomize 版本。
 

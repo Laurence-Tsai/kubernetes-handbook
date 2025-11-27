@@ -165,7 +165,7 @@ kubectl [command] [TYPE] [NAME] [flags]
 
 常用 kubectl 命令如下表所示。
 
-{{< table title="常用 kubectl 命令说明" >}}
+## 常用 kubectl 命令说明
 
 | Command      | Description                  | Example                                         |
 | ------------ | ---------------------------- | ----------------------------------------------- |
@@ -177,8 +177,6 @@ kubectl [command] [TYPE] [NAME] [flags]
 | logs         | 查看容器日志                 | `kubectl logs nginx`                            |
 | exec         | 容器内执行命令               | `kubectl exec -it nginx -- bash`                |
 | port-forward | 本地端口转发到 Pod           | `kubectl port-forward pod/nginx 8080:80`        |
-
-{{< /table >}}
 
 ## 直接访问 API
 
@@ -196,7 +194,7 @@ curl http://localhost:8080/api/v1/namespaces/default/pods
 
 kubectl 支持多种输出格式，便于脚本化和自动化处理。
 
-{{< table title="kubectl 支持的输出格式" >}}
+## kubectl 支持的输出格式
 
 | Format         | Description              | Example                                                      |
 | -------------- | ------------------------ | ------------------------------------------------------------ |
@@ -208,15 +206,13 @@ kubectl 支持多种输出格式，便于脚本化和自动化处理。
 | jsonpath       | JSONPath 过滤            | `kubectl get pods -o jsonpath='{.items[0].metadata.name}'`   |
 | go-template    | Go 模板格式化            | `kubectl get pods -o go-template='{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}'` |
 
-{{< /table >}}
-
 ## kubectl 的 JSONPath 用法
 
 JSONPath 是一种 JSON 查询语言，kubectl 支持用其提取 API 响应中的特定字段，适合自动化脚本。
 
 常用 JSONPath 表达式如下。
 
-{{< table title="常用 JSONPath 表达式" >}}
+## 常用 JSONPath 表达式
 
 | Expression                    | Description                   |
 | ----------------------------- | ----------------------------- |
@@ -225,8 +221,6 @@ JSONPath 是一种 JSON 查询语言，kubectl 支持用其提取 API 响应中�
 | `{.status.phase}`             | 资源状态                      |
 | `{range .items[*]}{end}`      | 遍历所有项                    |
 | `{.spec.containers[*].image}` | 所有容器镜像                  |
-
-{{< /table >}}
 
 ## Server-Side Apply
 
@@ -275,7 +269,7 @@ application/apply-patch+yaml" --> apiServer
 
 Kubernetes 提供多语言官方客户端库，便于程序化访问。
 
-{{< table title="Kubernetes 官方客户端库" >}}
+## Kubernetes 官方客户端库
 
 | Language   | Client Library                          |
 | ---------- | --------------------------------------- |
@@ -284,8 +278,6 @@ Kubernetes 提供多语言官方客户端库，便于程序化访问。
 | Java       | github.com/kubernetes-client/java       |
 | JavaScript | github.com/kubernetes-client/javascript |
 | .NET       | github.com/kubernetes-client/csharp     |
-
-{{< /table >}}
 
 此外还有众多社区维护的客户端库。
 

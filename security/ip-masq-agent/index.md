@@ -116,15 +116,13 @@ MASQUERADE all  --  anywhere             anywhere             /* ip-masq-agent: 
 
 ip-masq-agent 的配置文件支持多种参数，灵活适配不同网络环境。
 
-{{< table title="ip-masq-agent 配置参数说明" >}}
+## ip-masq-agent 配置参数说明
 
 | 参数名              | 类型         | 说明                                                         | 示例值                        |
 |---------------------|--------------|--------------------------------------------------------------|-------------------------------|
 | nonMasqueradeCIDRs  | 字符串数组   | 不进行伪装的 IP 范围（CIDR 格式）                            | `["10.0.0.0/8", "192.168.0.0/16"]` |
 | masqLinkLocal       | 布尔值       | 是否对本地链路地址（169.254.0.0/16）进行伪装                  | `false`                       |
 | resyncInterval      | 时间间隔字符串 | 配置文件自动重载的时间间隔                                   | `"60s"`、`"5m"`、`"1h"`        |
-
-{{< /table >}}
 
 ## 使用场景
 
@@ -180,7 +178,7 @@ iptables -t nat -L IP-MASQ-AGENT -v
 
 为保障集群网络安全与高可用，建议遵循以下最佳实践：
 
-{{< table title="Kubernetes ip-masq-agent 使用最佳实践" >}}
+## Kubernetes ip-masq-agent 使用最佳实践
 
 | 类别           | 建议与说明                                         | 具体举例或工具         |
 |----------------|----------------------------------------------------|-----------------------|
@@ -188,8 +186,6 @@ iptables -t nat -L IP-MASQ-AGENT -v
 | 监控           | 定期监控 iptables 规则和网络流量                   | Prometheus、日志分析   |
 | 版本兼容性     | 确认 ip-masq-agent 与 Kubernetes 版本兼容           | 官方文档、Release Note |
 | 配置备份       | 修改前备份现有 ConfigMap                            | kubectl get configmap |
-
-{{< /table >}}
 
 ## 总结
 

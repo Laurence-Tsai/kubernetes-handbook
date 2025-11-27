@@ -78,7 +78,7 @@ subsets:
 
 Kubernetes 支持多种 ServiceType，满足不同访问需求。
 
-{{< table title="Kubernetes Service 类型对比" >}}
+## Kubernetes Service 类型对比
 
 | 类型           | 说明                                                         | 典型场景           |
 |----------------|--------------------------------------------------------------|--------------------|
@@ -86,8 +86,6 @@ Kubernetes 支持多种 ServiceType，满足不同访问需求。
 | NodePort       | 每个 Node 分配静态端口，外部可通过 `<NodeIP>:<NodePort>` 访问 | 开发测试、简单暴露 |
 | LoadBalancer   | 云厂商负载均衡器，自动分配外部 IP                             | 生产级外部访问     |
 | ExternalName   | 通过 CNAME 指向外部 DNS 名称                                 | 代理外部服务       |
-
-{{< /table >}}
 
 ### ClusterIP
 

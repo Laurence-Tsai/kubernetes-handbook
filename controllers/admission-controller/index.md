@@ -61,7 +61,7 @@ Authentication → Authorization → Mutating Admission → Validating Admission
 
 Kubernetes 内置了多种准入控制器插件，用于常见策略和安全控制。下表简要介绍常用插件及其功能。
 
-{{< table title="Kubernetes 内建准入控制器插件说明" >}}
+## Kubernetes 内建准入控制器插件说明
 
 | 控制器名称                   | 功能描述                            | 版本/状态           |
 | ----------------------- | ------------------------------- | ------------------- |
@@ -74,8 +74,6 @@ Kubernetes 内置了多种准入控制器插件，用于常见策略和安全控
 | `TaintNodesByCondition` | 为 Node 添加系统级污点                  | 推荐/长期支持        |
 | `DefaultStorageClass`   | 自动为 PVC 绑定默认存储类                 | 推荐/长期支持        |
 | `PodSecurityPolicy`     | Pod 安全策略（已废弃，1.25 移除）           | 已废弃/请勿再用      |
-
-{{< /table >}}
 
 > **注意：**  
 >
@@ -99,7 +97,7 @@ kube-apiserver \
 
 两者主要区别如下：
 
-{{< table title="内建准入控制器与 Admission Webhook 对比" >}}
+## 内建准入控制器与 Admission Webhook 对比
 
 | 对比项  | 内建准入控制器            | 准入 Webhook      |
 | ---- | ------------------ | --------------- |
@@ -108,8 +106,6 @@ kube-apiserver \
 | 部署位置 | 集群内部               | 任意可访问的服务（常在集群内） |
 | 可扩展性 | 有限                 | 极高              |
 | 使用场景 | 通用系统策略             | 组织级定制、动态策略      |
-
-{{< /table >}}
 
 两者是互补关系：
 

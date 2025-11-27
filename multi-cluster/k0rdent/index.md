@@ -25,15 +25,13 @@ k0rdent 的主要目标和能力包括：
 
 k0rdent 的架构由多个模块组成，每个模块对应一个平台职责。下表对各核心组件及其功能进行了总结，便于理解其分工：
 
-{{< table title="k0rdent 核心组件与功能" >}}
+## k0rdent 核心组件与功能
 
 | 组件 | 功能说明 |
 |------|-----------|
 | KCM (k0rdent Cluster Manager) | 管理集群的创建、升级、配置、扩容与销毁，基于 Cluster API 实现。负责与基础设施提供商交互以实际创建云/裸金属资源，并驱动子集群的 bootstrap 流程。 |
 | KSM (k0rdent State Manager) | 管理集群中关键状态与策略（如 beach‑head services、策略模板、集群级别配置），负责将平台模板与策略下发到各子集群并确保配置一致性。 |
 | KOF (k0rdent Observability & FinOps) | 提供跨集群的监控、事件、日志与成本分析能力，支持统一的指标采集、告警与成本可视化面板。 |
-
-{{< /table >}}
 
 补充说明：KSM 在实践中常与 Project Sveltos 等策略/策略下发工具配合使用；KOF 可集成 Prometheus/Grafana、Loki、以及成本分析系统以提供完整的观测与 FinOps 功能。
 
@@ -127,7 +125,7 @@ sequenceDiagram
 
 为了帮助读者理解 k0rdent 的定位，下面的表格对比了主流多集群方案的核心差异：
 
-{{< table title="k0rdent 与主流多集群方案对比" >}}
+## k0rdent 与主流多集群方案对比
 
 | 维度     | k0rdent                  | Karmada             | Volcano             |
 | -------- | ------------------------ | ------------------- | ------------------- |
@@ -135,8 +133,6 @@ sequenceDiagram
 | 管理层级 | 多集群生命周期管理       | 多集群工作负载分发  | 单集群 Pod 调度     |
 | 技术基础 | Cluster API + 声明式架构 | 原生 Kubernetes API | Scheduler Framework |
 | 适用场景 | IDP 构建、混合云治理     | 多云部署、策略同步  | AI/HPC 批量任务调度 |
-
-{{< /table >}}
 
 简而言之，Karmada 是“多集群联邦控制面”，Volcano 是“高性能调度器”，而 k0rdent 则是更上层的“超级控制平面”，帮助构建平台工程化的多集群系统。
 
@@ -164,7 +160,7 @@ k0rdent 适用于多种企业级和创新型场景。以下列表总结了其主
 
 下表总结了 k0rdent 的主要特性及其带来的收益：
 
-{{< table title="k0rdent 关键特性与收益" >}}
+## k0rdent 关键特性与收益
 
 | 特性 | 收益 |
 | --- | --- |
@@ -172,8 +168,6 @@ k0rdent 适用于多种企业级和创新型场景。以下列表总结了其主
 | 平台级模板与策略 | 快速复制平台能力，缩短平台交付时间 |
 | 集中式观测与 FinOps | 多集群统一可视化，便于资源与成本优化 |
 | 可扩展 Provider 架构 | 支持多云及裸金属，提升跨环境一致性 |
-
-{{< /table >}}
 
 ## 总结
 

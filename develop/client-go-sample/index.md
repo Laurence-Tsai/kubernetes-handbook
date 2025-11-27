@@ -12,7 +12,7 @@ lastmod: 2025-10-27T17:30:18.192Z
 
 在开发或运维 Kubernetes 集群时，常见的访问方式如下表所示：
 
-{{< table title="Kubernetes 集群访问方式对比" >}}
+## Kubernetes 集群访问方式对比
 
 | 方式 | 特点 | 支持者 | 适用场景 |
 |:-----|:-----|:-------|:---------|
@@ -21,8 +21,6 @@ lastmod: 2025-10-27T17:30:18.192Z
 | [client-go](https://github.com/kubernetes/client-go) | Go 语言客户端库，功能强大，类型安全 | 官方支持 | 自定义应用开发 |
 | [client-python](https://github.com/kubernetes-client/python) | Python 客户端库，易于集成 | 官方支持 | Python 生态应用 |
 | [Java client](https://github.com/kubernetes-client/java) | Java 客户端库，企业级应用 | 官方支持 | Java 企业应用 |
-
-{{< /table >}}
 
 ## client-go 实战示例
 
@@ -139,7 +137,7 @@ func homeDir() string {
 
 ### 关键改进说明
 
-{{< table title="client-go 示例关键改进说明" >}}
+## client-go 示例关键改进说明
 
 | 改进点         | 说明                                                         |
 |----------------|--------------------------------------------------------------|
@@ -148,8 +146,6 @@ func homeDir() string {
 | 错误处理优化   | 提供更清晰的错误消息和退出码                                 |
 | 参数扩展       | 支持指定命名空间参数                                         |
 | 代码结构优化   | 提高可读性和维护性                                           |
-
-{{< /table >}}
 
 ## 编译和使用
 
@@ -257,7 +253,7 @@ kubectl get pods -l app=nginx-app -w
 
 ## 最佳实践
 
-{{< table title="client-go 自动化管理最佳实践" >}}
+## client-go 自动化管理最佳实践
 
 | 类别         | 建议与说明                                         |
 |--------------|----------------------------------------------------|
@@ -266,8 +262,6 @@ kubectl get pods -l app=nginx-app -w
 | 滚动更新策略 | 合理设置 `maxUnavailable` 和 `maxSurge`            |
 | 回滚准备     | 保留历史版本，便于快速回滚                         |
 | 监控告警     | 配置监控与告警机制，及时发现异常                   |
-
-{{< /table >}}
 
 ## 总结
 

@@ -85,7 +85,7 @@ HAMi 的核心创新在于将物理设备虚拟化为多个虚拟实例，并实
 
 HAMi 采用插件架构，支持多家主流厂商的异构设备：
 
-{{< table title="HAMi 支持的主流异构设备" >}}
+## HAMi 支持的主流异构设备
 
 | 厂商      | 设备类型 | 资源名称示例                                         | 主要特性                  |
 | --------- | -------- | ---------------------------------------------------- | ------------------------- |
@@ -97,8 +97,6 @@ HAMi 采用插件架构，支持多家主流厂商的异构设备：
 | Mthreads  | GPU      | `mthreads.com/vgpu`, `mthreads.com/sgpu-memory`      | GPU 共享                  |
 | Enflame   | GPU      | `enflame.com/gcu`, `enflame.com/gcu-memory`          | GCU 支持                  |
 | Metax     | GPU      | `metax-tech.com/gpu`, `metax-tech.com/sgpu`          | GPU 虚拟化                |
-
-{{< /table >}}
 
 ## 调度与资源分配策略
 

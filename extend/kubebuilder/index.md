@@ -136,7 +136,7 @@ flowchart LR
 
 下表为 Kubebuilder 项目的标准目录结构及说明：
 
-{{< table title="Kubebuilder 项目结构" >}}
+## Kubebuilder 项目结构
 
 | 目录/文件 | 作用 |
 | --- | --- |
@@ -151,8 +151,6 @@ flowchart LR
 | config/manager/ | 控制器管理器部署 |
 | internal/controller/ | 控制器实现 |
 | hack/ | 开发脚本与样板 |
-
-{{< /table >}}
 
 该结构遵循 Kubernetes 控制器开发规范，实现 API 类型与控制器逻辑分离。
 
@@ -246,7 +244,7 @@ Manager 是核心，负责：
 
 Kubebuilder 项目通过 controller-runtime 默认支持如下指标，可集成 Prometheus：
 
-{{< table title="Kubebuilder 默认监控指标" >}}
+## Kubebuilder 默认监控指标
 
 | 指标名称 | 类型 | 说明 |
 | --- | --- | --- |
@@ -257,8 +255,6 @@ Kubebuilder 项目通过 controller-runtime 默认支持如下指标，可集成
 | `controller_runtime_active_workers` | Gauge | 当前活跃 worker 数 |
 | `workqueue_depth` | Gauge | 工作队列深度 |
 | `workqueue_adds_total` | Counter | 工作队列处理的总添加数 |
-
-{{< /table >}}
 
 默认暴露在 8443 端口，可通过 ServiceMonitor 集成 Prometheus。
 

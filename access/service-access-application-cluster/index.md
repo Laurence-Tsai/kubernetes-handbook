@@ -213,15 +213,13 @@ kubectl delete deployment hello-world
 
 遇到无法访问或负载均衡异常时，可参考下表进行排查。
 
-{{< table title="Kubernetes Service 常见故障与解决方案" >}}
+## Kubernetes Service 常见故障与解决方案
 
 | 问题                   | 排查建议                                                         |
 |------------------------|------------------------------------------------------------------|
 | 无法访问应用程序       | 检查 NodePort、验证防火墙规则、确认 Pod 状态正常                 |
 | Service 无 Endpoints   | 检查 selector 是否匹配 Pod 标签，确认 Pod 处于 Running 状态      |
 | 负载均衡不工作         | 验证有多个 Pod，检查 Service 的 Endpoints 列表                   |
-
-{{< /table >}}
 
 ## 总结
 

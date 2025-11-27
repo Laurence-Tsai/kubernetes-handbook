@@ -61,7 +61,7 @@ webhooks:
 
 下表对关键字段进行说明：
 
-{{< table title="ValidatingWebhookConfiguration 字段说明" >}}
+## ValidatingWebhookConfiguration 字段说明
 
 | 字段                        | 含义                                |
 | ------------------------- | --------------------------------- |
@@ -71,8 +71,6 @@ webhooks:
 | `failurePolicy`           | Webhook 超时或出错时的处理策略（Ignore/Fail）  |
 | `sideEffects`             | 指明 Webhook 是否有副作用                 |
 | `timeoutSeconds`          | 请求超时设置                            |
-
-{{< /table >}}
 
 ## Webhook 服务实现
 

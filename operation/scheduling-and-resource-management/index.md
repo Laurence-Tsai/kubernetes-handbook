@@ -133,7 +133,7 @@ flowchart LR
 
 下表列举了常用内置调度插件及其作用：
 
-{{< table title="Kubernetes 默认调度插件及扩展点" >}}
+## Kubernetes 默认调度插件及扩展点
 
 | 插件 | 说明 | 扩展点 |
 | --- | --- | --- |
@@ -149,8 +149,6 @@ flowchart LR
 | DefaultBinder | 默认绑定机制 | bind |
 | DefaultPreemption | 抢占逻辑 | postFilter |
 
-{{< /table >}}
-
 ## 资源管理机制
 
 Kubernetes 支持为 Pod 中的容器指定资源请求（requests）与限制（limits），用于调度与资源分配。
@@ -159,7 +157,7 @@ Kubernetes 支持为 Pod 中的容器指定资源请求（requests）与限制�
 
 主要资源类型如下：
 
-{{< table title="Kubernetes 支持的资源类型" >}}
+## Kubernetes 支持的资源类型
 
 | 资源类型 | 说明 | 单位 |
 | --- | --- | --- |
@@ -168,8 +166,6 @@ Kubernetes 支持为 Pod 中的容器指定资源请求（requests）与限制�
 | Ephemeral Storage | 临时存储 | 字节（Ki、Mi、Gi 等） |
 | Huge Pages | 大页内存（Linux） | 指定大小（如 hugepages-2Mi） |
 | Extended Resources | 自定义扩展资源 | 整数单位 |
-
-{{< /table >}}
 
 ### Requests 与 Limits
 
@@ -352,7 +348,7 @@ kubelet 监控节点资源压力，主动驱逐 Pod 以防节点故障。
 
 kubelet 依据多种信号判断资源压力：
 
-{{< table title="节点驱逐信号说明" >}}
+## 节点驱逐信号说明
 
 | 驱逐信号 | 说明 |
 | --- | --- |
@@ -361,8 +357,6 @@ kubelet 依据多种信号判断资源压力：
 | nodefs.inodesFree | 节点文件系统可用 inode |
 | imagefs.available | 镜像存储可用空间 |
 | pid.available | 可用进程数 |
-
-{{< /table >}}
 
 阈值分为软阈值（有宽限期）和硬阈值（立即驱逐）。驱逐顺序依次考虑 QoS 类别、资源使用与优先级。
 
