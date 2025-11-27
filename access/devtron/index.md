@@ -261,15 +261,13 @@ graph TD
 
 Devtron 支持多种安装模式，满足不同场景需求。
 
-{{< table title="Devtron 安装选项" >}}
+## Devtron 安装选项
 
 | 安装选项                       | 描述                         | 使用场景                   |
 |-------------------------------|------------------------------|----------------------------|
 | Devtron with CI/CD            | 完整安装，含 CI/CD           | 完整软件交付工作流         |
 | Helm Dashboard                | 仅 Helm 应用管理             | 管理现有 Helm 应用         |
 | Devtron with CI/CD and GitOps | 启用 GitOps (ArgoCD)         | 基于 GitOps 的部署工作流   |
-
-{{< /table >}}
 
 安装过程使用 Helm Chart，支持多种存储后端（MinIO、AWS S3、Azure Blob、GCS）。
 

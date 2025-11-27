@@ -88,14 +88,12 @@ flowchart LR
 
 kubelet 通过 CRI（Container Runtime Interface）与容器运行时通信。常见运行时包括 containerd、CRI-O、Docker（需 cri-dockerd）。需确保 kubelet 与容器运行时使用相同的 cgroup driver。
 
-{{< table title="cgroup driver 说明与推荐场景" >}}
+## cgroup driver 说明与推荐场景
 
 | cgroup driver | 说明 | 推荐场景 |
 | --- | --- | --- |
 | `cgroupfs` | 直接操作 cgroup 文件系统 | 非 systemd 系统 |
 | `systemd` | 由 systemd 管理 cgroup | systemd 系统（推荐） |
-
-{{< /table >}}
 
 ### 使用 kubeadm init 创建集群
 
@@ -173,7 +171,7 @@ Kubernetes 依赖 PKI 证书保障安全通信。kubeadm 负责控制面组件�
 
 证书默认存放于 `/etc/kubernetes/pki`，主要文件如下：
 
-{{< table title="kubeadm 证书文件说明" >}}
+## kubeadm 证书文件说明
 
 | 文件路径 | 说明 |
 | --- | --- |
@@ -183,8 +181,6 @@ Kubernetes 依赖 PKI 证书保障安全通信。kubeadm 负责控制面组件�
 | `/etc/kubernetes/pki/apiserver.key` | API Server 密钥 |
 | `/etc/kubernetes/pki/sa.key` | ServiceAccount 密钥 |
 | `/etc/kubernetes/pki/sa.pub` | ServiceAccount 公钥 |
-
-{{< /table >}}
 
 ### 证书续期流程
 

@@ -94,14 +94,12 @@ Pod 中断预算的典型工作流程如下：
 
 下表展示了 3 节点集群的初始 Pod 分布：
 
-{{< table title="节点维护初始状态示意表" >}}
+## 节点维护初始状态示意表
 
 |       node-1       |      node-2       |      node-3       |
 | :----------------: | :---------------: | :---------------: |
 | pod-a  *available* | pod-b *available* | pod-c *available* |
 | pod-x  *available* |                   |                   |
-
-{{< /table >}}
 
 其中 pod-a、pod-b、pod-c 属于同一个 Deployment，配置了要求至少 2 个副本可用的 PDB。
 
@@ -109,36 +107,30 @@ Pod 中断预算的典型工作流程如下：
 
 管理员执行 `kubectl drain node-1`，Pod 状态如下：
 
-{{< table title="排空 node-1 后 Pod 状态" >}}
+## 排空 node-1 后 Pod 状态
 
 |  node-1 *draining*   |      node-2       |      node-3       |
 | :------------------: | :---------------: | :---------------: |
 | pod-a  *terminating* | pod-b *available* | pod-c *available* |
 | pod-x  *terminating* |                   |                   |
 
-{{< /table >}}
-
 控制器检测到 pod 终止，创建替代 Pod：
 
-{{< table title="新 Pod 创建中状态" >}}
+## 新 Pod 创建中状态
 
 |  node-1 *draining*   |      node-2       |      node-3       |
 | :------------------: | :---------------: | :---------------: |
 | pod-a  *terminating* | pod-b *available* | pod-c *available* |
 | pod-x  *terminating* | pod-d *starting*  |       pod-y       |
 
-{{< /table >}}
-
 ### 第二步：等待新 Pod 就绪
 
-{{< table title="新 Pod 就绪后状态" >}}
+## 新 Pod 就绪后状态
 
 | node-1 *drained* |      node-2       |      node-3       |
 | :--------------: | :---------------: | :---------------: |
 |                  | pod-b *available* | pod-c *available* |
 |                  | pod-d *available* |       pod-y       |
-
-{{< /table >}}
 
 ### 第三步：尝试排空 node-2
 
@@ -149,14 +141,12 @@ Pod 中断预算的典型工作流程如下：
 
 最终状态可能如下：
 
-{{< table title="排空 node-2 后可能状态" >}}
+## 排空 node-2 后可能状态
 
 | node-1 *drained* | node-2 *draining* |      node-3       |    *no node*    |
 | :--------------: | :---------------: | :---------------: | :-------------: |
 |                  |                   | pod-c *available* | pod-e *pending* |
 |                  | pod-d *available* |       pod-y       |                 |
-
-{{< /table >}}
 
 此时需要增加集群容量或等待资源释放才能继续维护操作。
 
@@ -172,15 +162,13 @@ Pod 中断预算支持以下角色分离，便于团队协作和职责明确。
 
 根据不同需求选择合适的维护策略，见下表：
 
-{{< table title="集群维护策略对比表" >}}
+## 集群维护策略对比表
 
 | 策略 | 停机时间 | 资源成本 | 自动化程度 | 适用场景 |
 |------|----------|----------|------------|----------|
 | 接受停机 | 有 | 低 | 高 | 测试环境 |
 | 蓝绿部署 | 无 | 高 | 中 | 关键业务 |
 | PDB + 滚动维护 | 无 | 低 | 高 | 生产推荐 |
-
-{{< /table >}}
 
 ## 配置建议
 

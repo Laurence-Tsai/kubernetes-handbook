@@ -317,7 +317,7 @@ spec:
 
 下表总结了使用 ConfigMap 的一些最佳实践：
 
-{{< table title="ConfigMap 使用最佳实践" >}}
+## ConfigMap 使用最佳实践
 
 <table>
   <thead>
@@ -379,7 +379,5 @@ spec:
     </tr>
   </tbody>
 </table>
-
-{{< /table >}}
 
 通过合理使用 ConfigMap，可以有效地管理 Kubernetes 应用的配置信息，实现配置与代码的解耦，提高应用的可维护性和可移植性。

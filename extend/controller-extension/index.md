@@ -47,15 +47,13 @@ sequenceDiagram
 
 下表简要说明控制器核心组件的作用。
 
-{{< table title="控制器核心组件说明" >}}
+## 控制器核心组件说明
 
 | 组件         | 作用                                   |
 | ------------ | -------------------------------------- |
 | Informer     | 监听资源变更（Add/Update/Delete）并缓存对象 |
 | WorkQueue    | 事件处理队列，用于异步处理资源变更            |
 | Reconciler   | 核心逻辑，执行实际的业务操作                 |
-
-{{< /table >}}
 
 ```mermaid "Informer 与工作队列"
 flowchart LR
@@ -141,7 +139,7 @@ flowchart TD
 
 下表对比了原生控制器与 Operator 的主要区别。
 
-{{< table title="原生控制器与 Operator 对比" >}}
+## 原生控制器与 Operator 对比
 
 | 对比项   | 原生控制器              | Operator                   |
 | -------- | ---------------------- | -------------------------- |
@@ -151,20 +149,16 @@ flowchart TD
 | 使用语言 | Kubernetes 原生      | 任意（常见为 Go）                 |
 | 典型工具 | client-go          | Kubebuilder / Operator SDK |
 
-{{< /table >}}
-
 ## 工具链：Kubebuilder 与 Operator SDK
 
 开发 Operator 时最常用的两种框架如下表所示。
 
-{{< table title="Operator 开发主流工具对比" >}}
+## Operator 开发主流工具对比
 
 | 工具               | 特点                         | 适用场景               |
 | ---------------- | -------------------------- | ------------------ |
 | Kubebuilder       | 官方维护、轻量级、Go 原生             | 快速构建单体 Operator    |
 | Operator SDK      | Red Hat 维护，支持 Helm/Ansible | 企业级 Operator 管理与发布 |
-
-{{< /table >}}
 
 它们都提供以下功能：
 

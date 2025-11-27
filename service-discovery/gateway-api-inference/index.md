@@ -112,7 +112,7 @@ EPP 是核心智能组件，实现调度和路由逻辑。其主要子模块包�
 
 下表总结了扩展引入的自定义 Kubernetes 资源及其作用：
 
-{{< table title="Inference Extension 关键资源一览" >}}
+## Inference Extension 关键资源一览
 
 | 资源 | API 版本 | 目的 |
 | --- | --- | --- |
@@ -120,8 +120,6 @@ EPP 是核心智能组件，实现调度和路由逻辑。其主要子模块包�
 | InferenceObjective | inference.networking.x-k8s.io/v1alpha2 | 为模型指定请求优先级和路由策略 |
 | Gateway | gateway.networking.k8s.io/v1 | 标准 Gateway API 资源，通过 EPP 集成扩展 |
 | HTTPRoute | gateway.networking.k8s.io/v1 | 将流量路由到 InferencePool 后端而非标准 Service |
-
-{{< /table >}}
 
 下图展示了资源之间的关系：
 
@@ -340,7 +338,7 @@ graph LR
 
 ### Gateway 提供商
 
-{{< table title="主流 Gateway 提供商支持情况" >}}
+## 主流 Gateway 提供商支持情况
 
 | 提供商 | 状态 | 备注 |
 | --- | --- | --- |
@@ -349,19 +347,15 @@ graph LR
 | Kgateway | 技术预览 | v2.1.0+ 滚动发布支持 |
 | Agentgateway | 技术预览 | Kgateway 控制平面 AI 优化代理 |
 
-{{< /table >}}
-
 ### 模型服务器
 
-{{< table title="主流模型服务器支持情况" >}}
+## 主流模型服务器支持情况
 
 | 服务器 | 支持级别 | 协议合规性 |
 | --- | --- | --- |
 | vLLM | 增强 | 与 llm-d 集成的完整协议支持 |
 | Triton Inference Server | 支持 | 需协议合规指标 |
 | SGLang | 支持 | 需协议合规指标 |
-
-{{< /table >}}
 
 ## 安装与配置
 

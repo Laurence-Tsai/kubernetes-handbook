@@ -146,7 +146,7 @@ APIService 适用于以下典型场景：
 
 虽然 APIService 是早期重要扩展机制，但随着 CRD 的成熟，它逐渐被边缘化。
 
-{{< table title="APIService 局限性与对比" >}}
+## APIService 局限性与对比
 
 | 局限性   | 说明                            |
 | -------- | ----------------------------- |
@@ -154,8 +154,6 @@ APIService 适用于以下典型场景：
 | 性能较低  | 每次访问需额外代理跳转                   |
 | 开发门槛高 | 必须遵循 Kubernetes API Server 架构 |
 | 可替代性强 | CRD + Operator 方案覆盖大多数需求      |
-
-{{< /table >}}
 
 目前社区主要将 APIService 用于系统组件，如 metrics-server、apiextensions-apiserver、kube-aggregator。
 

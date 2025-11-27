@@ -56,7 +56,7 @@ flowchart TD
 
 Kubernetes 支持多种 Service 类型，满足不同场景下的访问需求。
 
-{{< table title="Service 类型与适用场景" >}}
+## Service 类型与适用场景
 
 | 类型 | 描述 | 典型场景 |
 | --- | --- | --- |
@@ -64,8 +64,6 @@ Kubernetes 支持多种 Service 类型，满足不同场景下的访问需求。
 | NodePort | 每个节点开放静态端口 | 开发测试、简单外部访问 |
 | LoadBalancer | 云厂商负载均衡器 | 生产环境对外服务 |
 | ExternalName | 映射到外部 DNS 名称 | 访问集群外部服务 |
-
-{{< /table >}}
 
 ClusterIP（默认）仅集群内可访问，NodePort 和 LoadBalancer 均基于 ClusterIP 增加了外部访问能力。
 
@@ -283,15 +281,13 @@ flowchart TD
 
 Ingress 支持多种路径匹配方式：
 
-{{< table title="Ingress 路径类型说明" >}}
+## Ingress 路径类型说明
 
 | 路径类型 | 描述 | 示例 |
 | --- | --- | --- |
 | Prefix | 按 `/` 分割的前缀匹配 | `/foo` 匹配 `/foo/bar` |
 | Exact | 精确路径匹配 | `/foo` 仅匹配 `/foo` |
 | ImplementationSpecific | 由 IngressClass 决定 | 依赖控制器实现 |
-
-{{< /table >}}
 
 ## 网络策略（NetworkPolicy）
 

@@ -52,7 +52,7 @@ flowchart LR
 
 下表简要说明 Helm 的核心概念及其作用。
 
-{{< table title="Helm 核心概念说明" >}}
+## Helm 核心概念说明
 
 | 概念           | 说明                                 |
 | -------------- | ------------------------------------ |
@@ -62,8 +62,6 @@ flowchart LR
 | Templates/     | 存放 Kubernetes YAML 模板             |
 | Chart.yaml     | Chart 元信息（名称、版本、依赖等）    |
 | Repository     | 存储和分发 Chart 的仓库               |
-
-{{< /table >}}
 
 ## Helm 基本命令示例
 

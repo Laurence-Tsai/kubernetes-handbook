@@ -34,15 +34,13 @@ ReplicaSet 继承了 RC 的核心能力，并在标签选择器和兼容性方�
 
 下表总结了 ReplicaSet 与 ReplicationController 的主要区别，便于理解两者的演进关系。
 
-{{< table title="ReplicationController 与 ReplicaSet 对比" >}}
+## ReplicationController 与 ReplicaSet 对比
 
 | 特性         | ReplicationController      | ReplicaSet                       |
 |--------------|---------------------------|----------------------------------|
 | 标签选择器   | 仅支持相等性选择器        | 支持集合式选择器和相等性选择器   |
 | API 版本     | v1                        | apps/v1                          |
 | 推荐使用     | 已弃用                    | 推荐使用                         |
-
-{{< /table >}}
 
 ## 使用建议
 

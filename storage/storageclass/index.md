@@ -55,7 +55,7 @@ volumeBindingMode: WaitForFirstConsumer
 
 下表总结了主流云平台的内置分配器类型。
 
-{{< table title="主流云平台内置存储分配器" >}}
+## 主流云平台内置存储分配器
 
 | 存储类型 | 分配器名称 | 云平台 |
 |---------|-----------|--------|
@@ -64,8 +64,6 @@ volumeBindingMode: WaitForFirstConsumer
 | Azure Disk | disk.csi.azure.com | Microsoft Azure |
 | Azure File | file.csi.azure.com | Microsoft Azure |
 | vSphere | csi.vsphere.vmware.com | VMware vSphere |
-
-{{< /table >}}
 
 ### CSI 分配器
 

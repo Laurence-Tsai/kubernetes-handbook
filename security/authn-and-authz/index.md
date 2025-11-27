@@ -70,7 +70,7 @@ flowchart LR
 
 ### 常见认证方式
 
-{{< table title="Kubernetes 认证方式与说明" >}}
+## Kubernetes 认证方式与说明
 
 | 方式 | 说明 |
 | --- | --- |
@@ -78,8 +78,6 @@ flowchart LR
 | Bearer Token | 包括静态 Token、Bootstrap Token、ServiceAccount Token、OIDC Token |
 | Webhook Token | 通过外部服务校验 Token |
 | Authenticating Proxy | 依赖外部代理完成认证 |
-
-{{< /table >}}
 
 所有认证通过的用户自动加入 `system:authenticated` 组。
 
@@ -132,7 +130,7 @@ sequenceDiagram
 
 ### 鉴权请求属性
 
-{{< table title="Kubernetes 鉴权请求属性" >}}
+## Kubernetes 鉴权请求属性
 
 | 属性 | 说明 |
 | --- | --- |
@@ -147,8 +145,6 @@ sequenceDiagram
 | Subresource | 访问的子资源 |
 | Namespace | 命名空间 |
 | API group | API 组 |
-
-{{< /table >}}
 
 ### 鉴权模式与流程
 

@@ -105,7 +105,7 @@ flowchart TD
 
 控制面负责全局决策与事件响应，核心组件如下：
 
-{{< table title="Kubernetes 控制面组件说明" >}}
+## Kubernetes 控制面组件说明
 
 | 组件                    | 描述                 | 主要职责                 |
 | ----------------------- | -------------------- | ------------------------ |
@@ -113,8 +113,6 @@ flowchart TD
 | etcd                    | 一致性高可用键值存储 | 存储集群所有数据         |
 | kube-scheduler          | 监听新建 Pod         | 根据资源调度 Pod 到节点  |
 | kube-controller-manager | 运行控制器进程       | 通过控制循环维护集群状态 |
-
-{{< /table >}}
 
 ## 节点组件
 
@@ -142,15 +140,13 @@ flowchart LR
 ![节点组件与 Pod 关系](4266a1401509a843bfb7ee758f729664.svg)
 {width=1920 height=3272}
 
-{{< table title="Kubernetes 节点组件说明" >}}
+## Kubernetes 节点组件说明
 
 | 组件       | 描述         | 主要职责                                 |
 | ---------- | ------------ | ---------------------------------------- |
 | kubelet    | 节点代理     | 保证 Pod 中容器运行                      |
 | kube-proxy | 网络代理     | 维护节点网络规则                         |
 | 容器运行时 | 容器执行环境 | 运行容器（如 Docker、containerd、CRI-O） |
-
-{{< /table >}}
 
 ## Kubernetes API 与对象模型
 
@@ -193,15 +189,13 @@ Kubernetes 对象是集群状态的持久实体，描述：
 
 每个对象通过以下标识唯一确定：
 
-{{< table title="Kubernetes 对象标识说明" >}}
+## Kubernetes 对象标识说明
 
 | 标识      | 描述             | 示例                                   |
 | --------- | ---------------- | -------------------------------------- |
 | Name      | 用户自定义名称   | `nginx-deployment`                     |
 | UID       | 系统生成唯一标识 | `a8f3d1c8-0aeb-11e9-a4c2-000c29ed5138` |
 | Namespace | 命名空间范围     | `default`、`kube-system`               |
-
-{{< /table >}}
 
 命名空间内资源名称唯一，集群级资源全局唯一。
 
@@ -243,15 +237,13 @@ flowchart LR
 kubectl get pods --field-selector status.phase=Running
 ```
 
-{{< table title="常用字段选择器示例" >}}
+## 常用字段选择器示例
 
 | 资源类型 | 支持字段                                                   |
 | -------- | ---------------------------------------------------------- |
 | Pod      | `status.phase`, `spec.nodeName`, `spec.serviceAccountName` |
 | Node     | `spec.unschedulable`                                       |
 | Event    | `involvedObject.kind`, `reason`, `type`                    |
-
-{{< /table >}}
 
 ## 命名空间与资源隔离
 
@@ -376,7 +368,7 @@ flowchart TD
 ![Kubernetes 扩展点](5e3544b6d0aa3987b4ca85c2b5f791c3.svg)
 {width=1920 height=5819}
 
-{{< table title="Kubernetes 常见扩展机制" >}}
+## Kubernetes 常见扩展机制
 
 | 扩展类型       | 作用                   | 示例                               |
 | -------------- | ---------------------- | ---------------------------------- |
@@ -387,8 +379,6 @@ flowchart TD
 | 网络插件       | 实现 Pod 网络          | Calico、Cilium、Flannel            |
 | 存储插件       | 支持多种存储系统       | CSI 插件                           |
 
-{{< /table >}}
-
 ## 日志与监控
 
 Kubernetes 提供多种日志与监控能力，便于集群与应用的运维。
@@ -397,7 +387,7 @@ Kubernetes 提供多种日志与监控能力，便于集群与应用的运维。
 
 各组件日志路径如下：
 
-{{< table title="Kubernetes 组件日志路径" >}}
+## Kubernetes 组件日志路径
 
 | 组件                    | Linux 路径                                                   | Windows 路径                                                 |
 | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -406,8 +396,6 @@ Kubernetes 提供多种日志与监控能力，便于集群与应用的运维。
 | kube-controller-manager | `/var/log/kube-controller-manager.log`                       | `C:\var\logs\kube-controller-manager.log`                    |
 | kubelet                 | `/var/log/kubelet.log`                                       | `C:\var\logs\kubelet.log`                                    |
 | containers              | `/var/log/pods/<namespace>_<pod-name>_<uid>/<container-name>/` | `C:\var\log\pods\<namespace>_<pod-name>_<uid>\<container-name>\` |
-
-{{< /table >}}
 
 ### 指标采集
 

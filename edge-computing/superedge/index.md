@@ -90,7 +90,7 @@ graph TB
 
 为了便于查阅，下面以表格形式列出 SuperEdge 的主要云端与边缘组件及其功能。
 
-{{< table title="SuperEdge 主要组件表" >}}
+## SuperEdge 主要组件表
 
 | 组件 | 目录 | 主要功能 |
 | --- | --- | --- |
@@ -102,8 +102,6 @@ graph TB
 | `tunnel-edge` | pkg/tunnel/edge/ | 维护与云端隧道连接 |
 | `application-grid-wrapper` | pkg/application-grid-wrapper/ | ServiceGroup 内流量控制 |
 | `edge-health` | pkg/edge-health/ | 边缘节点健康监控 |
-
-{{< /table >}}
 
 ## 主要组件说明
 

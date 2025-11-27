@@ -340,7 +340,7 @@ OpenTelemetry 的标准化进展迅速，已成为云原生领域的主流方案
 
 这是展示 OpenTelemetry 主要标准版本的表格：
 
-{{< table title="OpenTelemetry 标准版本与说明" >}}
+## OpenTelemetry 标准版本与说明
 
 | 标准版本       | 说明                  | 发布日期    |
 | ------------- | --------------------- | ----------- |
@@ -348,8 +348,6 @@ OpenTelemetry 的标准化进展迅速，已成为云原生领域的主流方案
 | v1.10         | 增加日志与 metrics 语义一致性 | 2023        |
 | v1.50         | 最新规范版本，优化指标采样算法 | 2025-10     |
 | OTLP v0.23    | 当前 Collector 默认协议版本   | 2025        |
-
-{{< /table >}}
 
 目前，OpenTelemetry 已成为 CNCF 毕业项目，被 Kubernetes、Envoy、Istio、Grafana、Prometheus 等广泛集成，并成为 AWS、Google Cloud、Azure 等云厂商的事实标准方案。
 

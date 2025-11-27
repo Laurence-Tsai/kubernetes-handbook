@@ -132,13 +132,11 @@ StatefulSet 通过序数和 DNS 规则为每个 Pod 提供唯一身份，便于�
 
 DNS 解析示例：
 
-{{< table title="StatefulSet Pod DNS 解析示例" >}}
+## StatefulSet Pod DNS 解析示例
 
 | 集群域 | Service | StatefulSet | Pod DNS | Pod 主机名 |
 |--------|---------|-------------|---------|-----------|
 | cluster.local | default/nginx | default/web | web-{0..N-1}.nginx.default.svc.cluster.local | web-{0..N-1} |
-
-{{< /table >}}
 
 ### 稳定存储
 

@@ -14,7 +14,7 @@ Kubernetes 垃圾收集器（Garbage Collector）是集群中的重要组件，�
 
 在 Kubernetes 中，对象之间存在所有权关系。理解 Owner（所有者）与 Dependent（被拥有者）对象的关系，是掌握垃圾收集机制的基础。
 
-{{< table title="常见 Owner 与 Dependent 对象关系" >}}
+## 常见 Owner 与 Dependent 对象关系
 
 | Owner 对象   | Dependent 对象 |
 |--------------|---------------|
@@ -23,8 +23,6 @@ Kubernetes 垃圾收集器（Garbage Collector）是集群中的重要组件，�
 | Service      | Endpoints     |
 | Job          | Pod           |
 | StatefulSet  | Pod           |
-
-{{< /table >}}
 
 每个 Dependent 对象都有一个 `metadata.ownerReferences` 字段，指向其 Owner 对象。
 

@@ -227,7 +227,7 @@ spec:
 
 为了充分发挥 NetworkPolicy 的安全能力，建议遵循以下最佳实践：
 
-{{< table title="Kubernetes NetworkPolicy 使用最佳实践" >}}
+## Kubernetes NetworkPolicy 使用最佳实践
 
 | 类别           | 建议与说明                                                                 | 具体举例或工具           |
 |----------------|--------------------------------------------------------------------------|-------------------------|
@@ -239,8 +239,6 @@ spec:
 | 监控与日志     | 配合 Prometheus、Grafana 等工具监控策略效果和违规流量                     | Prometheus、Grafana     |
 | 策略管理工具   | 使用策略即代码工具（如 Kyverno）或可视化编辑器管理复杂策略                 | Kyverno、editor.networkpolicy.io |
 | 性能考虑       | 高流量环境下进行性能测试，关注 CNI 插件性能                               | —                       |
-
-{{< /table >}}
 
 ## 限制和注意事项
 

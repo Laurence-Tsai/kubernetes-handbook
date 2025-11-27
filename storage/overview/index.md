@@ -135,7 +135,7 @@ PV 与 PVC 的生命周期：
 
 不同存储后端支持不同的访问模式：
 
-{{< table title="持久卷访问模式说明" >}}
+## 持久卷访问模式说明
 
 | 访问模式 | 说明 |
 | --- | --- |
@@ -143,8 +143,6 @@ PV 与 PVC 的生命周期：
 | ReadOnlyMany (ROX) | 多节点只读挂载 |
 | ReadWriteMany (RWX) | 多节点读写挂载 |
 | ReadWriteOncePod (RWOP) | 单 Pod 读写挂载 |
-
-{{< /table >}}
 
 实际支持的模式取决于存储类型和供应商。
 
@@ -291,7 +289,7 @@ CSI 支持：供应/删除、挂载/卸载、快照、扩容、指标、健康�
 
 支持类型包括：
 
-{{< table title="Kubernetes 支持的临时卷类型" >}}
+## Kubernetes 支持的临时卷类型
 
 | 类型 | 说明 |
 | --- | --- |
@@ -301,8 +299,6 @@ CSI 支持：供应/删除、挂载/卸载、快照、扩容、指标、健康�
 | secret | 注入敏感数据 |
 | CSI ephemeral | 支持该特性的 CSI 驱动 |
 | generic ephemeral | 支持 PV 的任意驱动 |
-
-{{< /table >}}
 
 ```mermaid "临时卷生命周期"
 graph TD

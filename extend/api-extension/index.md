@@ -21,14 +21,12 @@ Kubernetes 的一切皆资源（Everything is a Resource）。无论是 Pod、Se
 
 Kubernetes 支持两种扩展 API 的方式，适用于不同的业务场景和复杂度需求。
 
-{{< table title="Kubernetes API 扩展方式对比" >}}
+## Kubernetes API 扩展方式对比
 
 | 扩展方式 | 简介 | 适用场景 | 复杂度 |
 |-----------|------|-----------|-----------|
 | **API Aggregation Layer（APIService）** | 聚合外部 API Server | 独立系统服务、metrics-server |  高 |
 | **CustomResourceDefinition（CRD）** | 定义自定义资源类型 | 绝大多数场景、Operator 模式 |  低 |
-
-{{< /table >}}
 
 两者都属于 *API 扩展机制*（API Extension Mechanism），区别在于前者是“外部聚合”，后者是“内部扩展”。
 
@@ -55,15 +53,13 @@ flowchart LR
 
 下表总结了 APIService 的主要优缺点：
 
-{{< table title="APIService 优势与局限" >}}
+## APIService 优势与局限
 
 | 优点                     | 缺点           |
 | ---------------------- | ------------ |
 | 独立生命周期与权限              | 部署复杂，需要证书和代理 |
 | 可聚合外部系统 API            | 性能略低于内置 API  |
 | 支持完全自定义的 API Server 实现 | 开发门槛高、维护成本大  |
-
-{{< /table >}}
 
 ### 示例：Metrics Server
 
@@ -137,7 +133,7 @@ kubectl apply -f mydb.yaml
 
 但随着 CRD 的成熟，社区逐渐转向 CRD 方案。今天，除非需要“独立进程与独立生命周期”，几乎所有项目都使用 CRD。
 
-{{< table title="APIService 与 CRD 对比" >}}
+## APIService 与 CRD 对比
 
 | 对比维度  | APIService                      | CRD               |
 | ----- | ------------------------------- | ----------------- |
@@ -147,8 +143,6 @@ kubectl apply -f mydb.yaml
 | 性能    | 中                               | 高                 |
 | 使用场景  | metrics-server、service catalog | Operator、自定义控制器  |
 | 推荐程度  | ⚠️ 仅限特殊场景                       | ✅ 主流方式            |
-
-{{< /table >}}
 
 ## 选择建议
 

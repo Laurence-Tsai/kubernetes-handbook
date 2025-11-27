@@ -15,15 +15,13 @@ lastmod: 2025-10-27T15:47:25.635Z
 
 Kubernetes 将 Pod 的 QoS 等级分为三类，分别适用于不同业务场景。下表总结了各等级的特征和适用场景。
 
-{{< table title="Kubernetes QoS 等级对比" >}}
+## Kubernetes QoS 等级对比
 
 | 等级         | 配置要求                                               | 适用场景         |
 |--------------|------------------------------------------------------|------------------|
 | Guaranteed   | 每个容器都设置 `limits` 和 `requests`，且值相等         | 关键业务应用      |
 | Burstable    | 至少有一个容器设置了 `requests` 或 `limits`，但不完全相等 | 一般业务、开发测试 |
 | BestEffort   | 所有容器都未设置 `limits` 和 `requests`                | 非关键、批处理任务 |
-
-{{< /table >}}
 
 ### Guaranteed（保证级）
 

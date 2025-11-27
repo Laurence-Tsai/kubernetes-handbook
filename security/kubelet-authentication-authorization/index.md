@@ -97,7 +97,7 @@ Kubelet 授权时会将 HTTP 请求映射为标准的 Kubernetes 资源操作属
 
 下表展示了 HTTP 动词与 Request 动词的对应关系：
 
-{{< table title="Kubelet HTTP 动词与 Request 动词映射" >}}
+## Kubelet HTTP 动词与 Request 动词映射
 
 | HTTP 动词 | Request 动词 |
 |-----------|-------------|
@@ -107,13 +107,11 @@ Kubelet 授权时会将 HTTP 请求映射为标准的 Kubernetes 资源操作属
 | PATCH     | patch       |
 | DELETE    | delete      |
 
-{{< /table >}}
-
 ### 资源路径映射
 
 不同的 Kubelet API 路径对应不同的资源和子资源：
 
-{{< table title="Kubelet API 路径与资源映射" >}}
+## Kubelet API 路径与资源映射
 
 | Kubelet API 路径 | 资源  | 子资源  |
 |------------------|-------|---------|
@@ -122,8 +120,6 @@ Kubelet 授权时会将 HTTP 请求映射为标准的 Kubernetes 资源操作属
 | /logs/*          | nodes | log     |
 | /spec/*          | nodes | spec    |
 | 其他所有路径     | nodes | proxy   |
-
-{{< /table >}}
 
 **注意事项：**
 
@@ -157,7 +153,7 @@ Kubelet 授权时会将 HTTP 请求映射为标准的 Kubernetes 资源操作属
 
 为保障 Kubelet 端点安全，建议遵循以下最佳实践：
 
-{{< table title="Kubelet 认证与授权最佳实践" >}}
+## Kubelet 认证与授权最佳实践
 
 | 建议类别         | 具体建议                         |
 |------------------|----------------------------------|
@@ -166,8 +162,6 @@ Kubelet 授权时会将 HTTP 请求映射为标准的 Kubernetes 资源操作属
 | 证书管理         | 定期轮换客户端证书                |
 | 日志监控         | 监控访问日志，及时发现异常行为     |
 | 权限分配         | 遵循最小权限原则，仅授予必要权限   |
-
-{{< /table >}}
 
 ## 总结
 

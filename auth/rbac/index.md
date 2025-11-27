@@ -229,7 +229,7 @@ subjects:
 
 Kubernetes 定义了一些特殊的系统组，便于批量授权和系统管理。
 
-{{< table title="Kubernetes 系统特殊组说明" >}}
+## Kubernetes 系统特殊组说明
 
 | 组名 | 说明 |
 |------|------|
@@ -238,15 +238,13 @@ Kubernetes 定义了一些特殊的系统组，便于批量授权和系统管理
 | system:authenticated | 所有已认证用户 |
 | system:unauthenticated | 所有未认证用户 |
 
-{{< /table >}}
-
 ## 默认角色和角色绑定
 
 Kubernetes 预定义了一系列默认角色，这些角色名称以 `system:` 前缀标识系统组件所有。
 
 ### 用户角色
 
-{{< table title="Kubernetes 默认用户角色" >}}
+## Kubernetes 默认用户角色
 
 | 角色 | 绑定 | 描述 |
 |------|------|------|
@@ -255,11 +253,9 @@ Kubernetes 预定义了一系列默认角色，这些角色名称以 `system:` �
 | edit | 无 | 允许读写大多数资源，但不能查看或修改角色 |
 | view | 无 | 只读权限，不能查看角色或 Secret |
 
-{{< /table >}}
-
 ### 系统组件角色
 
-{{< table title="Kubernetes 系统组件角色" >}}
+## Kubernetes 系统组件角色
 
 | 角色 | 用途 |
 |------|------|
@@ -267,8 +263,6 @@ Kubernetes 预定义了一系列默认角色，这些角色名称以 `system:` �
 | system:kube-controller-manager | 控制器管理器权限 |
 | system:node | kubelet 组件权限 |
 | system:kube-proxy | kube-proxy 组件权限 |
-
-{{< /table >}}
 
 ### 自动更新机制
 

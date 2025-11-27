@@ -16,7 +16,7 @@ Init 容器（Init Container）是运行在 Pod 中的特殊容器，在应用�
 
 ### Init 容器的核心特性
 
-{{< table title="Init 容器与应用容器的核心特性对比" >}}
+## Init 容器与应用容器的核心特性对比
 
 | 特性         | Init 容器                   | 应用容器                   |
 |--------------|----------------------------|----------------------------|
@@ -24,8 +24,6 @@ Init 容器（Init Container）是运行在 Pod 中的特殊容器，在应用�
 | 重启策略     | 失败时重启整个 Pod         | 根据 restartPolicy 处理    |
 | 就绪探针     | 不支持 readinessProbe      | 支持各种探针               |
 | 生命周期     | 一次性执行                 | 长期运行                   |
-
-{{< /table >}}
 
 - **顺序执行**：多个 Init 容器按照定义顺序一个接一个地运行
 - **必须成功**：每个 Init 容器都必须成功完成，下一个容器才能启动
@@ -291,15 +289,13 @@ initContainers:
 
 ## 版本兼容性
 
-{{< table title="Init 容器在不同 Kubernetes 版本中的支持情况" >}}
+## Init 容器在不同 Kubernetes 版本中的支持情况
 
 | 版本           | 支持方式                  | 说明           |
 | -------------- | ------------------------- | -------------- |
 | Kubernetes 1.6+| `spec.initContainers` 字段 | 推荐，主流用法 |
 | Kubernetes 1.5 | beta 注解                 | 已废弃         |
 | 当前版本       | 完全支持                  | 功能稳定       |
-
-{{< /table >}}
 
 现代 Kubernetes 集群应始终使用 `spec.initContainers` 字段定义 Init 容器。
 

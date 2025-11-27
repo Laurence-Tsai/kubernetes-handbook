@@ -69,7 +69,7 @@ Scheduler Framework 将原本单体的调度器逻辑模块化，定义了一组
 
 下表总结了各扩展点的作用：
 
-{{< table title="Scheduler Framework 扩展点说明表" >}}
+## Scheduler Framework 扩展点说明表
 
 | 扩展点              | 阶段   | 作用               |
 | ---------------- | ---- | ---------------- |
@@ -83,8 +83,6 @@ Scheduler Framework 将原本单体的调度器逻辑模块化，定义了一组
 | `Permit`         | 准许   | 等待外部确认或延迟绑定      |
 | `Bind`           | 绑定   | 执行绑定动作           |
 | `PostBind`       | 绑定后  | 执行后置处理（通知、审计等）   |
-
-{{< /table >}}
 
 ## 示例：简单自定义调度插件
 
@@ -141,7 +139,7 @@ profiles:
 
 Scheduler Framework 插件可以通过三种方式运行：
 
-{{< table title="Scheduler Framework 插件运行模式" >}}
+## Scheduler Framework 插件运行模式
 
 | 模式                           | 说明                   | 典型应用        |
 | ---------------------------- | -------------------- | ----------- |
@@ -149,15 +147,13 @@ Scheduler Framework 插件可以通过三种方式运行：
 | 外部插件（Out-of-tree）          | 独立进程，通过 KEP-785 动态注册 | GPU、AI 调度扩展 |
 | 调度配置文件（Scheduler Profile） | 通过 YAML 指定启用哪些插件     | 多租户、策略切换    |
 
-{{< /table >}}
-
 合理选择插件运行模式，有助于提升调度器的灵活性和可维护性。
 
 ## 典型应用场景
 
 在实际生产环境中，Scheduler Framework 支持多种调度扩展场景：
 
-{{< table title="Scheduler Framework 典型应用场景" >}}
+## Scheduler Framework 典型应用场景
 
 | 场景                         | 插件类型               | 示例           |
 | -------------------------- | ------------------ | ------------ |
@@ -166,8 +162,6 @@ Scheduler Framework 插件可以通过三种方式运行：
 | 分区调度 / 拓扑感知            | PreFilter + Filter | 过滤掉不在拓扑域内的节点 |
 | 延迟调度（Delay Scheduling） | QueueSort + Permit | 提高资源利用率      |
 | 自定义亲和策略                | Score              | 依据业务权重选择节点   |
-
-{{< /table >}}
 
 这些场景充分体现了调度器的可扩展性和灵活性。
 

@@ -82,7 +82,7 @@ spec:
 
 GPU 调度涉及多维度资源匹配，传统调度器仅通过资源数量判断节点是否可用，而 GPU 场景下更复杂。下表总结了常见调度维度及插件类型。
 
-{{< table title="GPU 调度维度与插件类型" >}}
+## GPU 调度维度与插件类型
 
 | 调度维度       | 示例                        | 插件类型               |
 | ---------- | ------------------------- | ------------------ |
@@ -91,8 +91,6 @@ GPU 调度涉及多维度资源匹配，传统调度器仅通过资源数量判�
 | NUMA 拓扑    | CPU-GPU 亲和性               | PreFilter + Filter |
 | MIG 切分     | 多任务共享 GPU                 | Reserve + Bind     |
 | 多 Pod 同步调度 | Elastic Job / Barrier Job | Permit Plugin      |
-
-{{< /table >}}
 
 ## GPU 优先调度插件示例（Score Plugin）
 
@@ -197,15 +195,13 @@ func (p *BarrierPlugin) Permit(ctx context.Context, state *framework.CycleState,
 
 不同 AI 作业控制器在调度机制和应用场景上各具特色。下表对主流控制器进行对比。
 
-{{< table title="主流 AI 作业控制器对比" >}}
+## 主流 AI 作业控制器对比
 
 | 控制器         | 调度机制                                  | 特色           |
 | ----------- | ------------------------------------- | ------------ |
 | KubeRay     | Scheduler Framework + Ray Operator    | 分布式推理与弹性训练   |
 | Volcano     | 独立调度器 + 队列 + Job                      | HPC/AI 批处理任务 |
 | Kueue       | Queue + Admission 控制                  | 多租户与资源公平共享   |
-
-{{< /table >}}
 
 这些控制器都基于 Kubernetes 调度扩展机制，实现了 AI 原生调度逻辑：
 
@@ -217,7 +213,7 @@ func (p *BarrierPlugin) Permit(ctx context.Context, state *framework.CycleState,
 
 针对不同目标，调度插件类型和策略也有所不同。下表总结了常见调度目标与对应策略。
 
-{{< table title="GPU/AI 调度策略设计参考" >}}
+## GPU/AI 调度策略设计参考
 
 | 目标       | 插件类型           | 策略                  |
 | -------- | -------------- | ------------------- |
@@ -226,8 +222,6 @@ func (p *BarrierPlugin) Permit(ctx context.Context, state *framework.CycleState,
 | 延迟容忍     | QueueSort      | 优先级与资源等待权衡          |
 | 多任务同步    | Permit         | Job Barrier 同步执行    |
 | AI 推理优化  | Bind           | 按 NUMA + GPU 拓扑绑定容器 |
-
-{{< /table >}}
 
 ## 实践：在 KubeRay 中启用 GPU 感知调度
 

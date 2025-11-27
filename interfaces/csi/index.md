@@ -19,7 +19,7 @@ CSI 在 Kubernetes 中作为 out-of-tree 插件实现，这意味着存储驱动
 
 ## CSI 发展历程
 
-{{< table title="Kubernetes CSI 发展历程" >}}
+## Kubernetes CSI 发展历程
 
 | 版本           | 里程碑说明                |
 | -------------- | ------------------------ |
@@ -27,8 +27,6 @@ CSI 在 Kubernetes 中作为 out-of-tree 插件实现，这意味着存储驱动
 | v1.10          | 升级为 Beta 特性          |
 | v1.13          | 正式 GA（General Availability） |
 | v1.14+         | CSI 成为存储插件标准方式   |
-
-{{< /table >}}
 
 ## CSI 架构
 
@@ -67,7 +65,7 @@ graph LR
 
 CSI 持久化卷支持以下关键字段：
 
-{{< table title="CSI 持久化卷关键字段说明" >}}
+## CSI 持久化卷关键字段说明
 
 | 字段名           | 说明                                 |
 |------------------|--------------------------------------|
@@ -76,8 +74,6 @@ CSI 持久化卷支持以下关键字段：
 | readOnly         | 是否只读模式（可选，默认 false）      |
 | fsType           | 文件系统类型（可选）                  |
 | volumeAttributes | 传递给驱动程序的额外参数              |
-
-{{< /table >}}
 
 ## 使用 CSI
 
@@ -178,7 +174,7 @@ CSI 驱动程序需实现以下三个主要接口：
 
 Kubernetes 社区提供了多种 sidecar 容器，简化 CSI 驱动开发和运维：
 
-{{< table title="Kubernetes CSI Sidecar 容器功能对比" >}}
+## Kubernetes CSI Sidecar 容器功能对比
 
 | Sidecar 容器           | 功能描述                 |
 |-----------------------|--------------------------|
@@ -188,8 +184,6 @@ Kubernetes 社区提供了多种 sidecar 容器，简化 CSI 驱动开发和运�
 | external-snapshotter  | 管理卷快照功能           |
 | node-driver-registrar | 向 kubelet 注册 CSI 驱动  |
 | livenessprobe         | 监控 CSI 驱动健康状态    |
-
-{{< /table >}}
 
 ### 部署最佳实践
 

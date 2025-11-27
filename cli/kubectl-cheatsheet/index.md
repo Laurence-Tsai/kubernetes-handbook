@@ -263,7 +263,7 @@ kubectl get events --watch --field-selector involvedObject.name=my-pod
 
 ## 常用资源类型简写
 
-{{< table title="Kubernetes 常用资源类型简写对照表" >}}
+## Kubernetes 常用资源类型简写对照表
 
 | 资源类型 | 简写 | 资源类型 | 简写 |
 |---------|------|---------|------|
@@ -276,11 +276,9 @@ kubectl get events --watch --field-selector involvedObject.name=my-pod
 | statefulsets | sts | cronjobs | cj |
 | horizontalpodautoscalers | hpa | ingresses | ing |
 
-{{< /table >}}
-
 ## 输出格式选项
 
-{{< table title="kubectl 输出格式选项说明" >}}
+## kubectl 输出格式选项说明
 
 | 格式 | 描述 |
 |------|------|
@@ -292,13 +290,11 @@ kubectl get events --watch --field-selector involvedObject.name=my-pod
 | -o custom-columns=<spec> | 自定义列 |
 | -o go-template=<template> | Go 模板 |
 
-{{< /table >}}
-
 ## 调试和详细输出
 
 通过 `-v` 参数可控制日志详细程度，便于调试和问题定位。
 
-{{< table title="kubectl 日志详细级别说明" >}}
+## kubectl 日志详细级别说明
 
 | 级别 | 描述 |
 |------|------|
@@ -308,8 +304,6 @@ kubectl get events --watch --field-selector involvedObject.name=my-pod
 | --v=4 | 调试信息 |
 | --v=6 | 显示请求资源 |
 | --v=8 | 显示 HTTP 请求内容 |
-
-{{< /table >}}
 
 ## 实用技巧
 

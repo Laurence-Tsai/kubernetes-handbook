@@ -212,14 +212,12 @@ CRI **不适用于**：
 
 ## 主流 CRI 实现
 
-{{< table title="主流 CRI 实现对比" >}}
+## 主流 CRI 实现对比
 
 | 运行时         | 维护者         | 特点                         | 使用场景                |
 | -------------- | -------------- | ---------------------------- | ----------------------- |
 | containerd     | CNCF           | 轻量级、高性能、生产就绪      | 云原生环境、生产部署     |
 | CRI-O          | Red Hat/CNCF   | 专为 Kubernetes 设计、OCI 兼容 | OpenShift、企业环境      |
-
-{{< /table >}}
 
 ### 安全增强型运行时
 
@@ -287,7 +285,7 @@ crictl exec -it <container-id> /bin/bash
 
 ## 总结
 
-{{< table title="CRI 核心要点总结" >}}
+## CRI 核心要点总结
 
 | 方面       | 详情                                                         |
 | ---------- | ------------------------------------------------------------ |
@@ -298,8 +296,6 @@ crictl exec -it <container-id> /bin/bash
 | 实现者     | containerd、CRI-O 及其他容器运行时                           |
 | 设计理念   | 以 Kubernetes 为中心，非通用接口                             |
 | 定义位置   | [api.proto](https://github.com/kubernetes/cri-api/blob/65157e11/pkg/apis/runtime/v1/api.proto) |
-
-{{< /table >}}
 
 CRI 让 Kubernetes 生态支持多样化容器运行时实现，同时为 kubelet 保持稳定接口。这一架构决策使容器运行时技术能独立于 Kubernetes 编排逻辑持续演进。
 

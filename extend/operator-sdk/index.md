@@ -163,7 +163,7 @@ graph TD
 
 Operator SDK CLI 提供了完整的 Operator 开发生命周期命令集。下表简要说明各命令用途：
 
-{{< table title="Operator SDK CLI 常用命令说明" >}}
+## Operator SDK CLI 常用命令说明
 
 | 命令                | 目的                                   |
 |---------------------|----------------------------------------|
@@ -176,8 +176,6 @@ Operator SDK CLI 提供了完整的 Operator 开发生命周期命令集。下�
 | `olm`               | 管理 OLM 安装和集成                    |
 | `cleanup`           | 清理使用 `run` 命令部署的 Operator     |
 | `pkgman-to-bundle`  | 从包 manifests 迁移到 bundles          |
-
-{{< /table >}}
 
 ## 创建第一个 Operator 项目
 

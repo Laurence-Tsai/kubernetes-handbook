@@ -310,15 +310,13 @@ graph TD
 
 Terraform 与 Helm、Kustomize、GitOps 并非二选一，而是各有侧重、互为补充。下表对比各工具关注点与最佳实践。
 
-{{< table title="Terraform 与 Helm/Kustomize/GitOps 对比" >}}
+## Terraform 与 Helm/Kustomize/GitOps 对比
 
 | 维度     | Terraform                        | Helm             | Kustomize  | GitOps(Argo CD/Flux)                        |
 |----------|----------------------------------|------------------|------------|---------------------------------------------|
 | 关注点   | 跨云/集群/应用统一 IaC & 状态    | 应用打包与参数化 | 资源差异化 | 基于 Git 的声明式持续同步                   |
 | State    | 有（tfstate）                    | 无               | 无         | 以 Git 为源，集群状态对齐 Git              |
 | 最佳姿势 | 集群/平台基座/稳定业务           | 应用层快速分发   | 简洁变更   | 与 Terraform 互补，明确所有权边界           |
-
-{{< /table >}}
 
 实际生产中，常见组合为：**Terraform 管理底座与平台组件，GitOps 管理上层应用**，或由 Terraform 统一管理 Helm release，关键是明确所有权边界。
 

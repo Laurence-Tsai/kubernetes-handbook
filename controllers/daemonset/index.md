@@ -67,7 +67,7 @@ DaemonSet 的调度机制与普通 Pod 不同，具备如下特点：
 
 DaemonSet Pod 自动添加以下容忍配置：
 
-{{< table title="DaemonSet Pod 默认容忍的污点" >}}
+## DaemonSet Pod 默认容忍的污点
 
 | 污点键                                 | Effect         |
 |----------------------------------------|---------------|
@@ -76,8 +76,6 @@ DaemonSet Pod 自动添加以下容忍配置：
 | node.kubernetes.io/disk-pressure       | NoSchedule    |
 | node.kubernetes.io/memory-pressure     | NoSchedule    |
 | node.kubernetes.io/unschedulable       | NoSchedule    |
-
-{{< /table >}}
 
 ## 通信模式
 
@@ -158,7 +156,7 @@ spec:
 
 下表对比了 DaemonSet 与其他常见控制器的适用场景和特性。
 
-{{< table title="DaemonSet 与其他控制器对比" >}}
+## DaemonSet 与其他控制器对比
 
 | 控制器类型      | 主要特性                   | 适用场景           |
 |----------------|----------------------------|--------------------|
@@ -166,8 +164,6 @@ spec:
 | Deployment     | 指定副本数，高可用与分担    | 无状态服务         |
 | StaticPod      | kubelet 直接管理，配置简单  | 特殊场景、功能有限 |
 | Job/CronJob    | 一次性/定时任务             | 批处理、定时任务   |
-
-{{< /table >}}
 
 ## 总结
 

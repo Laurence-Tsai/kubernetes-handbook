@@ -173,7 +173,7 @@ Warning  FailedScheduling  AvoidNodePlugin  node node01 is labeled avoid=true
 
 下表总结了各类插件的关键方法与应用场景：
 
-{{< table title="Scheduler Framework 插件类型与接口对照表" >}}
+## Scheduler Framework 插件类型与接口对照表
 
 | 插件类型                 | 关键方法               | 阶段说明          | 示例           |
 | -------------------- | ------------------ | ------------- | ------------ |
@@ -187,8 +187,6 @@ Warning  FailedScheduling  AvoidNodePlugin  node node01 is labeled avoid=true
 | PermitPlugin         | `Permit()`         | 等待外部确认        | AI 作业同步调度    |
 | BindPlugin           | `Bind()`           | 执行绑定操作        | 控制 Pod 与节点绑定 |
 | PostBindPlugin       | `PostBind()`       | 绑定完成后         | 发送通知或更新状态    |
-
-{{< /table >}}
 
 ## 实例：GPU 优先调度插件
 
@@ -227,7 +225,7 @@ plugins:
 
 下表总结了常用调试工具和方法：
 
-{{< table title="Scheduler 插件调试技巧" >}}
+## Scheduler 插件调试技巧
 
 | 工具             | 用途          | 示例命令                                               |
 | -------------- | ----------- | -------------------------------------------------- |
@@ -235,8 +233,6 @@ plugins:
 | `kubectl logs` | 查看 Pod 调度日志 | `kubectl logs -n kube-system kube-scheduler-node1` |
 | `pprof`        | 性能分析        | `curl localhost:10251/debug/pprof`                 |
 | `trace`        | 调度器跟踪事件     | `kubectl get events -A \| grep Scheduling`          |
-
-{{< /table >}}
 
 ## 插件开发最佳实践
 

@@ -50,14 +50,12 @@ sequenceDiagram
 
 Kubernetes 定义了两类 Webhook，分别用于不同的扩展场景。下表总结了两类 Webhook 的功能与典型用途。
 
-{{< table title="Admission Webhook 类型与用途" >}}
+## Admission Webhook 类型与用途
 
 | 类型                           | 功能           | 典型用途                     |
 | ------------------------------ | -------------- | ---------------------------- |
 | MutatingAdmissionWebhook       | 可修改对象内容 | 注入默认值、自动添加 Sidecar |
 | ValidatingAdmissionWebhook     | 只读验证对象   | 安全策略校验、字段一致性检查 |
-
-{{< /table >}}
 
 执行顺序如下：
 
@@ -102,7 +100,7 @@ webhooks:
 
 表格说明：下表解释了 Webhook 配置的主要字段。
 
-{{< table title="Webhook 配置主要字段说明" >}}
+## Webhook 配置主要字段说明
 
 | 字段                      | 说明                                          |
 | ------------------------- | --------------------------------------------- |
@@ -111,8 +109,6 @@ webhooks:
 | namespaceSelector         | 控制哪些命名空间会应用 Webhook                |
 | admissionReviewVersions   | 与 API Server 通信的版本                      |
 | sideEffects               | 声明 Webhook 是否会产生副作用                 |
-
-{{< /table >}}
 
 ## Webhook 服务实现示例
 
@@ -192,7 +188,7 @@ spec:
 
 Webhook 与 Controller/Operator 的区别与联系如下表所示。
 
-{{< table title="Webhook 与 Controller 对比" >}}
+## Webhook 与 Controller 对比
 
 | 对比维度 | Webhook                | Controller                 |
 | -------- | ---------------------- | -------------------------- |
@@ -200,8 +196,6 @@ Webhook 与 Controller/Operator 的区别与联系如下表所示。
 | 执行逻辑 | 实时、同步             | 持续、异步                 |
 | 返回影响 | 决定请求是否被接受     | 调整资源状态以实现期望状态 |
 | 典型用途 | 安全、策略、默认值注入 | 自动化、修复、调度逻辑     |
-
-{{< /table >}}
 
 在复杂系统中，Webhook 通常与 Controller 搭配使用：
 
@@ -246,14 +240,12 @@ kubectl describe pod pod-test
 
 Webhook 失败时的处理策略如下表所示。
 
-{{< table title="Webhook failurePolicy 策略对比" >}}
+## Webhook failurePolicy 策略对比
 
 | 参数                    | 含义               | 建议               |
 | ----------------------- | ------------------ | ------------------ |
 | failurePolicy: Fail     | 拒绝请求（默认）   | 适合安全关键操作   |
 | failurePolicy: Ignore   | 忽略错误，继续执行 | 适合非关键扩展功能 |
-
-{{< /table >}}
 
 可通过 `timeoutSeconds` 限制 Webhook 最大响应时间（默认 10 秒）。
 

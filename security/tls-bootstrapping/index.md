@@ -262,7 +262,7 @@ kubectl certificate deny <csr-name>
 
 在生产环境中，建议遵循以下最佳实践以提升安全性和可维护性：
 
-{{< table title="Kubernetes TLS Bootstrap 最佳实践" >}}
+## Kubernetes TLS Bootstrap 最佳实践
 
 | 类别         | 建议与说明                                         | 具体举例或工具         |
 |--------------|----------------------------------------------------|-----------------------|
@@ -271,8 +271,6 @@ kubectl certificate deny <csr-name>
 | 自动化       | 使用自动审批控制器，减少手动操作                    | 内置 csrapproving 控制器 |
 | 备份         | 定期备份 CA 证书和私钥                              | etcd、离线存储         |
 | 权限控制     | 严格控制能审批 CSR 的用户和服务账号权限             | RBAC                  |
-
-{{< /table >}}
 
 ## 总结
 
